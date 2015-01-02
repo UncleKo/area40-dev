@@ -1,0 +1,46 @@
+body {
+   margin: rhythm(8) rhythm(8);
+}
+::selection {
+   background: rgb(254, 87, 161);
+   color: white;
+}
+
+// button {
+//    font-family: 'Limelight', cursive;
+//    @include sassy-button("shiny", 6px, 14px, #cede85, #a7bf35);
+//    border: 0 none;
+//    @include leader(6);
+// }
+
+// header {
+//    @include trailer(2);
+//    @include clearfix;
+// }
+
+h1 {	
+   font-weight: bold;
+   @include adjust-font-size-to(30px);
+   @include trailer(3, 30px);
+   position: relative;
+}
+
+// h1::before {
+//   content: '';
+//   height: rhythm(4, 32px);
+//   position: absolute;
+//   top: 5px;
+//   left: 0;
+// }
+
+p {
+   @include adjust-font-size-to(13px);
+	@include trailer(2, 13px);
+
+   line-height: 24px;
+   // I needed this static way to fix a problem
+   // line-heingt: 23.984375px end up with 46px 
+   // when it cross 2 lines and break the rhythm
+}
+
+

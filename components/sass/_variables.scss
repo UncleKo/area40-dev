@@ -1,0 +1,51 @@
+@include border-box-sizing; //uses border box sizing like the old IE...sweet.
+// I should use this instead?
+// html {
+//   box-sizing: border-box;
+// }
+// *, *:before, *:after {
+//   box-sizing: inherit;
+// }
+
+//Susy Global Settings
+$susy: (
+  columns: 12,
+  container: 60em,
+  gutters: 1/4,
+  gutter-position: inside
+);
+
+// Fonts, measure, leading and typefaces
+// ------------------------------------------------------------
+
+
+// Fonts size and line height defaults for our calculations
+
+$base-font-size						: 16px; 				// Sets the browser default size. Shouldn't need to change this.
+$base-line-height					: 8px;					// Baseline grid. Set to a sensible, small size.
+$round-to-nearest-half-line			: false;  				// Round the line height to the nearest half line height. Off by default 
+
+/* ----------------------------------------------------------- */
+/* ::Debugs and #grid by Jon Gibbins */
+/* ----------------------------------------------------------- */
+
+#grid {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#grid div.horiz{
+	// Use this one NOT using a global border-box setting
+	// height: $base-line-height - 1px;
+	
+	// Use this one if you ARE using a global border-box setting
+    height: $base-line-height;
+    
+    // Carry on...
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+}
+

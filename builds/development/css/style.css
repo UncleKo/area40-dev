@@ -63,4 +63,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 14, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------- */
+/* ::Debugs and #grid by Jon Gibbins */
+/* ----------------------------------------------------------- */
+/* line 32, ../../../components/sass/_variables.scss */
+#grid {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 39, ../../../components/sass/_variables.scss */
+#grid div.horiz {
+  height: 8px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../../../components/sass/_base.scss */
+body {
+  margin: 4em 4em;
+}
+
+/* line 4, ../../../components/sass/_base.scss */
+::selection {
+  background: #fe57a1;
+  color: white;
+}
+
+/* line 21, ../../../components/sass/_base.scss */
+h1 {
+  font-weight: bold;
+  font-size: 1.875em;
+  line-height: 1.33333em;
+  margin-bottom: 0.8em;
+  position: relative;
+}
+
+/* line 36, ../../../components/sass/_base.scss */
+p {
+  font-size: 0.8125em;
+  line-height: 1.84615em;
+  margin-bottom: 1.23077em;
+  line-height: 24px;
+}
+
 /*# sourceMappingURL=style.css.map */
