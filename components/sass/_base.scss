@@ -1,5 +1,9 @@
+// @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+// @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
 body {
    margin: rhythm(8) rhythm(8);
+   font-family: $fontJapanese
 }
 ::selection {
    background: rgb(254, 87, 161);
@@ -19,6 +23,7 @@ body {
 // }
 
 h1 {	
+   font-family: $fontEnglish;
    font-weight: bold;
    @include adjust-font-size-to(30px);
    @include trailer(3, 30px);
@@ -34,10 +39,10 @@ h1 {
 // }
 
 p {
-   @include adjust-font-size-to(13px);
-	@include trailer(2, 13px);
+   @include adjust-font-size-to(16px);
+	@include trailer(2, 16px);
 
-   line-height: 24px;
+   // line-height: 24px;
    // I needed this static way to fix a problem
    // line-heingt: 23.984375px end up with 46px 
    // when it cross 2 lines and break the rhythm

@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ----------------------------------------------------------- */
 /* ::Debugs and #grid by Jon Gibbins */
 /* ----------------------------------------------------------- */
-/* line 32, ../../../components/sass/_variables.scss */
+/* line 38, ../../../components/sass/_variables.scss */
 #grid {
   width: 100%;
   position: absolute;
@@ -81,7 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 0;
 }
 
-/* line 39, ../../../components/sass/_variables.scss */
+/* line 45, ../../../components/sass/_variables.scss */
 #grid div.horiz {
   height: 8px;
   border-bottom: 1px solid #ddd;
@@ -89,19 +89,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0;
 }
 
-/* line 1, ../../../components/sass/_base.scss */
+/* line 4, ../../../components/sass/_base.scss */
 body {
   margin: 4em 4em;
+  font-family: "&#12513;&#12452;&#12522;&#12458;", "Meiryo", "&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3", "Hiragino Kaku Gothic Pro", "MS P&#12468;&#12471;&#12483;&#12463;", "MS P Gothic", sans-serif;
 }
 
-/* line 4, ../../../components/sass/_base.scss */
+/* line 8, ../../../components/sass/_base.scss */
 ::selection {
   background: #fe57a1;
   color: white;
 }
 
-/* line 21, ../../../components/sass/_base.scss */
+/* line 25, ../../../components/sass/_base.scss */
 h1 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.875em;
   line-height: 1.33333em;
@@ -109,12 +111,11 @@ h1 {
   position: relative;
 }
 
-/* line 36, ../../../components/sass/_base.scss */
+/* line 41, ../../../components/sass/_base.scss */
 p {
-  font-size: 0.8125em;
-  line-height: 1.84615em;
-  margin-bottom: 1.23077em;
-  line-height: 24px;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
