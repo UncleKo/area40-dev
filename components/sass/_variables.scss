@@ -18,7 +18,12 @@ $susy: (
 $fontJapanese: "&#12513;&#12452;&#12522;&#12458;","Meiryo","&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3","Hiragino Kaku Gothic Pro","MS P&#12468;&#12471;&#12483;&#12463;","MS P Gothic",sans-serif;
 
 $fontEnglish: "Helvetica Neue",Arial,Helvetica,sans-serif;
+$fontBlack: "Arial Black", "Helvetica Neue",Arial,Helvetica,sans-serif;
 $fontVerdana: Verdana, "Helvetica Neue",Arial,Helvetica,sans-serif;
+
+// Colors
+$usuao: #91B493;
+$momo: #F596AA;
 
 
 // Fonts, measure, leading and typefaces
@@ -30,28 +35,4 @@ $fontVerdana: Verdana, "Helvetica Neue",Arial,Helvetica,sans-serif;
 $base-font-size						: 16px; 				// Sets the browser default size. Shouldn't need to change this.
 $base-line-height					: 8px;					// Baseline grid. Set to a sensible, small size.
 $round-to-nearest-half-line			: false;  				// Round the line height to the nearest half line height. Off by default 
-
-/* ----------------------------------------------------------- */
-/* ::Debugs and #grid by Jon Gibbins */
-/* ----------------------------------------------------------- */
-
-#grid {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#grid div.horiz{
-	// Use this one NOT using a global border-box setting
-	// height: $base-line-height - 1px;
-	
-	// Use this one if you ARE using a global border-box setting
-    height: $base-line-height;
-    
-    // Carry on...
-    border-bottom: 1px solid #ddd;
-    margin: 0;
-    padding: 0;
-}
 

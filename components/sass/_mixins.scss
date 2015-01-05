@@ -1,0 +1,67 @@
+
+@mixin image_rep {
+   font:0/0 a; 
+   text-shadow:none; 
+   color:transparent;
+}
+
+@mixin round_button($buttonBaseColor: #e95d4b) {
+         @include background(
+            linear-gradient(
+               saturate(lighten($buttonBaseColor, 10%), 5%),
+               darken($buttonBaseColor, 10%)
+               )
+            );
+
+         @include box-shadow(#eaeaea 0 0 0 4px, fade-out(white, 0.75) 0 1px 0 1px inset);
+         border: $buttonBaseColor 1px solid;
+
+         &:hover {
+            $buttonBaseColor: saturate(lighten($buttonBaseColor, 5%), 10%);
+            @include background(
+               linear-gradient(
+                  saturate(lighten($buttonBaseColor, 10%), 5%),
+                  darken($buttonBaseColor, 10%)
+                  )
+               );
+
+            @include box-shadow(#eaeaea 0 0 0 4px, fade-out(white, 0.75) 0 1px 0 1px inset);
+            border: $buttonBaseColor 1px solid;
+         }
+}
+
+@mixin backImage(
+   $image,
+   // $grDir: to bottom,
+   // $opStart: 0,
+   // $opEnd: 0,
+   $bgPos: center center,
+   $bgAtt: fixed
+   ) {
+  background: 
+  // linear-gradient (
+  //  $grDir,
+  //  rgba(0,0,0, $opStart),
+  //  rgba(0,0,0, $opEnd)
+  // ),
+  url($image); 
+  background-repeat: no-repeat;
+  background-position: $bgPos;
+  background-attachment: $bgAtt;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin clearfix {
+   &:before,
+   &:after {
+      content: '';
+      display: table;
+   }
+   &:after {
+      clear: both;
+   }
+}
+

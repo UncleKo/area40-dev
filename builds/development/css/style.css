@@ -70,28 +70,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* ----------------------------------------------------------- */
-/* ::Debugs and #grid by Jon Gibbins */
-/* ----------------------------------------------------------- */
-/* line 38, ../../../components/sass/_variables.scss */
-#grid {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* line 45, ../../../components/sass/_variables.scss */
-#grid div.horiz {
-  height: 8px;
-  border-bottom: 1px solid #ddd;
-  margin: 0;
-  padding: 0;
-}
-
 /* line 4, ../../../components/sass/_base.scss */
 body {
-  margin: 4em 4em;
   font-family: "&#12513;&#12452;&#12522;&#12458;", "Meiryo", "&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3", "Hiragino Kaku Gothic Pro", "MS P&#12468;&#12471;&#12483;&#12463;", "MS P Gothic", sans-serif;
 }
 
@@ -116,6 +96,49 @@ p {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1em;
+}
+
+/* ----------------------------------------------------------- */
+/* ::Debugs and #grid by Jon Gibbins */
+/* ----------------------------------------------------------- */
+/* line 6, ../../../components/sass/_layout.scss */
+#grid {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 13, ../../../components/sass/_layout.scss */
+#grid div.horiz {
+  height: 8px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, ../../../components/sass/modules/_intro.scss */
+header .fullheight {
+  background-color: #91B493;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 17, ../../../components/sass/modules/_intro.scss */
+header .fullheight h1 {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
