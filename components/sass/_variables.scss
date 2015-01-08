@@ -15,15 +15,21 @@ $susy: (
   gutter-position: inside
 );
 
-$fontJapanese: "&#12513;&#12452;&#12522;&#12458;","Meiryo","&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3","Hiragino Kaku Gothic Pro","MS P&#12468;&#12471;&#12483;&#12463;","MS P Gothic",sans-serif;
+$mainFont: "&#12513;&#12452;&#12522;&#12458;","Meiryo","&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3","Hiragino Kaku Gothic Pro","MS P&#12468;&#12471;&#12483;&#12463;","MS P Gothic",sans-serif;
+$notoSans: "Noto Sans Japanese", "&#12513;&#12452;&#12522;&#12458;","Meiryo","&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3","Hiragino Kaku Gothic Pro","MS P&#12468;&#12471;&#12483;&#12463;","MS P Gothic",sans-serif;
 
-$fontEnglish: "Helvetica Neue",Arial,Helvetica,sans-serif;
+$fontHelvetica: "Helvetica Neue",Arial,Helvetica,sans-serif;
 $fontBlack: "Arial Black", "Helvetica Neue",Arial,Helvetica,sans-serif;
 $fontVerdana: Verdana, "Helvetica Neue",Arial,Helvetica,sans-serif;
+$sourceSans: "Source Sans Pro",  "Helvetica Neue",Arial,Helvetica,sans-serif;
 
 // Colors
+$white: #fff;
+$black: #000;
 $usuao: #91B493;
 $momo: #F596AA;
+$yamabuki: #FFB11B;
+$kuchiba: #E2943B;
 
 
 // Fonts, measure, leading and typefaces
@@ -35,4 +41,12 @@ $momo: #F596AA;
 $base-font-size						: 16px; 				// Sets the browser default size. Shouldn't need to change this.
 $base-line-height					: 8px;					// Baseline grid. Set to a sensible, small size.
 $round-to-nearest-half-line			: false;  				// Round the line height to the nearest half line height. Off by default 
+
+
+
+//Breakpoint variables
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
 

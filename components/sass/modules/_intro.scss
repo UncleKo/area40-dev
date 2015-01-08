@@ -1,24 +1,15 @@
-header {
-   .fullheight {
-      // @include backImage('../images/background/0001.jpg');
-      background-color: $usuao; 
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
-      @include display-flex();
-      @include align-items(center);
-      @include justify-content(center);
-
-      h1 {
-         color: #fff;
-         border: 2px solid #fff;
-         padding: 0 5px;
-      } //h1
-
-   } //fullheight
-} //header
+#intro {
+   h1 {
+      font-family: $sourceSans;
+      font-weight: 200;
+      @include adjust-font-size-to(60px);
+      @include leader(4, 60px)
+   }
+   h2 {
+      font-family: $notoSans;
+      font-weight: 200;
+      @include adjust-font-size-to(40px);
+      @include leader(4, 40px);
+      @include trailer(4, 40px);
+   }
+}

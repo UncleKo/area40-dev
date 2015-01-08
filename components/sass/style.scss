@@ -2,7 +2,7 @@
 // ==============
  
 //Compass imports
-@import "compass";
+/* @import "compass"; */
 @import "compass/reset";
 @import "compass/typography/vertical_rhythm";
 @import "compass/css3/box-shadow";
@@ -24,5 +24,6 @@
 
 // Import Modules
 
-// @import "modules/nav";
+@import "modules/header";
+@import "modules/nav";
 @import "modules/intro";

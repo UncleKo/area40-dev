@@ -1,0 +1,65 @@
+header {
+   .fullheight {
+      // @include backImage('../images/background/0001.jpg');
+      // background-color: $usuao; 
+      @include background-image(
+         linear-gradient(
+            right, lighten($usuao, 20), $usuao
+         )
+      );
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      @include display-flex();
+      @include align-items(center);
+      @include justify-content(center);
+
+      .hgroup {
+         position: relative;
+            h1 {
+               // color: $white;
+               // border: 2px solid darken(#fff, 10);
+               // padding: 0 5px;
+               @include image_rep;
+               background: url('/images/shrewd_logo.png') no-repeat center center;
+               width: 305px;
+               height: 36px;
+               margin: 0 auto;
+            } //h1
+
+            h2 {
+               position: absolute;
+               top: rhythm(8);
+               // @include leader(4);
+               span {
+                  @include adjust-font-size-to(12px);
+                  border: 1px solid darken($white, 10);
+                  background: $white;
+                  line-height: 1.8;
+                  } //span
+            } //h2
+
+            p {
+               text-align: center;
+               position: relative;
+               top: rhythm(16);
+               margin-bottom: 0;
+               span {
+                  color: white;
+                  @include adjust-font-size-to(55px);
+                  @include single-text-shadow(#aaa, 1px, -1px);
+                  &:hover {
+                     color: $yamabuki;
+                     @include text-shadow(#aaa 1px -1px, $yamabuki 0 0 5px);
+                  }
+               } //span
+            } //p
+      } //.hgroup
+
+   } //fullheight
+} //header

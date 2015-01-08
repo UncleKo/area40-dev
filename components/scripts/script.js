@@ -1,5 +1,5 @@
 (function() {
-   var topOffset = parseInt ($('#nav').css('height'));
+   var topOffset = parseInt ($('header nav').css('height'));
    // console.log(topOffset);
 
    var isTouch = 'ontouchstart' in document.documentElement;
@@ -18,26 +18,34 @@
    }); //on resize
 
    // Random Background Image
-   function changeImg(imgNumber) {
-      var myImages = ["images/background/0001.jpg", "images/background/0002.jpg", "images/background/0003.jpg", "images/background/0004.jpg","images/background/0005.jpg", "images/background/0006.jpg"]; 
-      // var imgShown = document.body.style.backgroundImage;
-      var newImgNumber =Math.floor(Math.random()*myImages.length);
+   // function changeImg(imgNumber) {
+   //    var myImages = ["images/background/1.jpg", "images/background/2.jpg", "images/background/3.jpg", "images/background/4.jpg","images/background/5.jpg", "images/background/6.jpg"]; 
+   //    // var imgShown = document.body.style.backgroundImage;
+   //    var newImgNumber =Math.floor(Math.random()*myImages.length);
 
-      $('#intro .fullheight').css('background-image', 'url('+myImages[newImgNumber]+')')
-      // $('#intro .fullheight').css({
-      //    'background-image': 'url('+myImages[newImgNumber]+')',
-      //    'background-repeat': 'no-repeat',
-      //    'background-position': 'center center',
-      //    'background-attachment': 'fixed',
-      //    '-webkit-background-size': 'cover',
-      //    '-moz-background-size': 'cover',
-      //    '-o-background-size': 'cover',
-      //    'background-size': 'cover'
-      // }); 
-      // document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
-   }
+   //    $('#intro .fullheight').css('background-image', 'url('+myImages[newImgNumber]+')')
+   //    // $('#intro .fullheight').css({
+   //    //    'background-image': 'url('+myImages[newImgNumber]+')',
+   //    //    'background-repeat': 'no-repeat',
+   //    //    'background-position': 'center center',
+   //    //    'background-attachment': 'fixed',
+   //    //    '-webkit-background-size': 'cover',
+   //    //    '-moz-background-size': 'cover',
+   //    //    '-o-background-size': 'cover',
+   //    //    'background-size': 'cover'
+   //    // }); 
+   //    // document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+   // }
 
-   window.onload=changeImg;
+   // window.onload=changeImg;
+
+   // Random Background 2nd
+   bgImageTotal=6;
+   // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
+   randomNumber = Math.ceil(Math.random()*bgImageTotal);
+   // console.log(randomNumber);
+   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+
 
    // Animated Scrolling
    $('a[href*=#]:not([href=#])').click(function() {
@@ -52,6 +60,21 @@
       } //target.length
     } //location hostname
    }); //on click
+
+   $(window).scroll(function() {
+      var windowpos = $(window).scrollTop(),
+         nav = $('header nav');
+      nav.removeClass('navShadow');
+      // nav.css('position', 'static');
+
+      if (windowpos >= nav.offset().top) {
+         nav.addClass('navShadow');
+         // nav.css('position', 'fixed');
+         // nav.css('top', '0');
+         // nav.css('left', '0');
+         // $('main').css('margin-top', topOffset);
+      }
+   });
 
    // heighlight navigation
    // $(window).scroll(function() {
@@ -74,8 +97,8 @@
 
    //pin the navigation
    var pin = new ScrollScene({
-      triggerElement: '#nav'
-   }).setPin('#nav').addTo(controller);
+      triggerElement: 'header nav'
+   }).setPin('header nav').addTo(controller);
 
 })(); //on load
 

@@ -1,3 +1,11 @@
+.scene {
+   div {
+      @include container;
+      @include clearfix;
+      padding: rhythm(4) 0; 
+   }
+}
+
 
 /* ----------------------------------------------------------- */
 /* ::Debugs and #grid by Jon Gibbins */
