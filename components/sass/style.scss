@@ -10,6 +10,7 @@
 @import 'compass/css3/filter';
 @import "compass/css3/flexbox";
 @import "compass/css3/transition";
+@import "compass/css3/border-radius";
 
 //External Libraries
 @import "susy";
@@ -27,3 +28,6 @@
 @import "modules/header";
 @import "modules/nav";
 @import "modules/intro";
+@import "modules/skills";
+@import "modules/process";
+@import "modules/article";

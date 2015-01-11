@@ -30,6 +30,40 @@
          }
 }
 
+// Gradient Transition Hack!!
+@mixin gradientTransition(
+   $direction: top,
+   $color: $yamabuki,
+   $duration: 0.5s,
+   $ease: ease-out
+) {
+   position: relative;
+   z-index:1;
+
+   &:after {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+
+         @include background-image(
+            linear-gradient(
+               $direction, lighten($color, 20), $color
+            )
+         );
+
+         transition: opacity $duration $ease;
+         z-index: 2;
+         opacity: 0;
+      } //a:after
+
+      &:hover:after {
+         opacity: 1;
+      } //a:hover:after
+} //transitionHack
+
 @mixin backImage(
    $image,
    // $grDir: to bottom,

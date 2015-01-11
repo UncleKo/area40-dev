@@ -16,7 +16,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -32,6 +32,12 @@ jsSources = [
   'components/scripts/jquery.scrollmagic.min.js',
   'components/scripts/script.js'
 ];
+jsOthers = [
+   'builds/development/js/jquery-2.1.3.min.js',
+   'builds/development/js/html5shiv.min.js',
+   'builds/development/js/selectivizr-min.js',
+   'builds/development/js/hashgrid.js'
+];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
@@ -43,6 +49,12 @@ gulp.task('js', function() {
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'))
     .pipe(connect.reload())
+});
+
+gulp.task('jsCopy', function() {
+  gulp.src(jsOthers)
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'js')))
+    // .pipe(connect.reload())
 });
 
 gulp.task('compass', function() {
@@ -90,4 +102,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'jsCopy', 'compass', 'move', 'connect']);

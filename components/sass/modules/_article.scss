@@ -1,0 +1,27 @@
+#as_housing, #vs_print {
+
+   div {
+      article {
+         @include clearfix;
+         @include border-radius(10px);
+         padding: rhythm(2) 30px;
+         background: $yamabuki;
+         @include background-image(
+            linear-gradient(
+               // right, lighten($momo, 10), $yamabuki
+               right, $kuchiba, $yamabuki
+            )
+         );
+         color: $white;
+      } //article
+
+      @include breakpoint($small) {
+         @include pad(2 0);
+      }
+      @include breakpoint($medium) {
+         p {
+            @include span(4 of 8);
+         }
+      }
+   } //div 
+} 

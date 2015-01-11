@@ -1,0 +1,25 @@
+#skills {
+   h3 {
+      // font-family: $sourceSans;
+      margin-bottom: 0px;
+   }
+   h4 {
+      font-family: $notoSans;
+      font-weight: 100;
+      @include adjust-font-size-to(20px);
+      @include trailer(1, 20px);
+   }
+   ul.top {
+      &>li {
+         ul.nested li {
+            @include adjust-font-size-to(16px);
+         } //ul.nested li
+         @include breakpoint($small) {
+            @include span(6);
+         }
+         @include breakpoint($medium) {
+            @include span(4);
+         }
+      } //ul.top li
+   } //ul.top
+} //#skills

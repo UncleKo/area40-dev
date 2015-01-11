@@ -1,10 +1,20 @@
 .scene {
-   div {
-      @include container;
-      @include clearfix;
-      padding: rhythm(4) 0; 
+   padding: rhythm(4) 0; 
+   &#as_housing {
+      padding-top: 0;
    }
-}
+   @include trailer(4);
+   @include clearfix;
+   .container {
+      @include container(95%);
+      @include clearfix;
+   }
+   @include breakpoint($medium) {
+      .container {
+         @include container;
+      } //div
+   } //breakpoint
+} //.scene
 
 
 /* ----------------------------------------------------------- */

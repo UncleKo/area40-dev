@@ -59,9 +59,12 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    // window.onload=changeImg;
 
    // Random Background 2nd
-   bgImageTotal=6;
+   bgImageTotal=18;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
+   // Not to pick up 0
    randomNumber = Math.ceil(Math.random()*bgImageTotal);
+   // To pick up 0 for white background every once in a while
+   // randomNumber = Math.round(Math.random()*bgImageTotal);
    // console.log(randomNumber);
    $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
 
@@ -74,7 +77,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top-topOffset
-        }, 1000);
+        }, 500);
         return false;
       } //target.length
     } //location hostname
@@ -96,15 +99,31 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    });
 
    // heighlight navigation
-   // $(window).scroll(function() {
-   //    var windowpos = $(window).scrollTop() + topOffset;
-   //    $('nav li a ').removeClass('active');
+   $(window).scroll(function() {
+      var windowpos = $(window).scrollTop() + topOffset +1,
+         link = $('#main_nav li a') ;
+      link.removeClass('active');
 
-   //    if (windowpos >= $('').offset().top) {
-   //       $('nav li a ').removeClass('active');
-   //       $('a[href$="#hotelinfo"]').addClass('active');
-   //    }
-   // });
+      if (windowpos >= $('#intro').offset().top) {
+         link.removeClass('active');
+         $('a[href$="#intro"]').addClass('active');
+      }
+
+      if (windowpos >= $('#skills').offset().top) {
+         link.removeClass('active');
+         $('a[href$="#skills"]').addClass('active');
+      }
+
+      if (windowpos >= $('#process').offset().top) {
+         link.removeClass('active');
+         $('a[href$="#process"]').addClass('active');
+      }
+
+      if (windowpos >= $('#accessibility').offset().top) {
+         link.removeClass('active');
+         $('a[href$="#accessibility"]').addClass('active');
+      }
+   });
 
 
    //set up ScrollMagic

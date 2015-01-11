@@ -35,9 +35,10 @@ header {
             h2 {
                position: absolute;
                top: rhythm(8);
+               @include adjust-font-size-to(12px);
+               font-family: $mainFont;
                // @include leader(4);
                span {
-                  @include adjust-font-size-to(12px);
                   border: 1px solid darken($white, 10);
                   background: $white;
                   line-height: 1.8;
@@ -50,9 +51,11 @@ header {
                top: rhythm(16);
                margin-bottom: 0;
                span {
-                  color: white;
-                  @include adjust-font-size-to(55px);
-                  @include single-text-shadow(#aaa, 1px, -1px);
+               transition: color 1s ease-out;
+                  color: $yamabuki;
+                  font-size: 55px;
+                  // @include adjust-font-size-to(55px);
+                  // @include single-text-shadow($kuchiba, 1px, -1px);
                   &:hover {
                      color: $yamabuki;
                      @include text-shadow(#aaa 1px -1px, $yamabuki 0 0 5px);

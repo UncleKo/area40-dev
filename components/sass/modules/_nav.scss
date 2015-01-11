@@ -8,20 +8,29 @@ header nav {
    z-index:100;
    width: 100%;
    color: #fff;
+   // height: 44px;
 
    #main_nav {
       @include container;
       h3 {
          @include span(4);
          @include adjust-font-size-to(20px);
-         position: relative;
-         z-index: 1;
+         margin: {
+            top: 0;
+            bottom: 0;
+         }
+         font-family: $fontHelvetica;
+         // letter-spacing: 1px;
          background-color: $kuchiba;
          @include background-image(
             linear-gradient(
                bottom, lighten($kuchiba, 20), $kuchiba
             )
          );
+         // @include box-shadow(
+         //    lighten($kuchiba, 10) 0 1px 10px
+         // );
+         
          a {
             color: $white;
             font-weight: bold;
@@ -34,34 +43,112 @@ header nav {
             // @include single-text-shadow(darken($usuao, 10), -1px, -1px);
          } // a
 
+         @include gradientTransition;
          // Gradient Transition Hack!!
-         &:after {
-               position: absolute;
-               content: '';
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
+         // &:after {
+         //       position: absolute;
+         //       content: '';
+         //       top: 0;
+         //       left: 0;
+         //       width: 100%;
+         //       height: 100%;
 
-               @include background-image(
-                  linear-gradient(
-                     top, lighten($yamabuki, 20), $yamabuki
-                  )
-               );
+         //       @include background-image(
+         //          linear-gradient(
+         //             top, lighten($yamabuki, 20), $yamabuki
+         //          )
+         //       );
 
-               transition: opacity 0.5s ease-out;
-               z-index: 2;
-               opacity: 0;
-            } //a:after
+         //       transition: opacity 0.5s ease-out;
+         //       z-index: 2;
+         //       opacity: 0;
+         //    } //a:after
 
-            &:hover:after {
-               opacity: 1;
-            } //a:hover:after
+         //    &:hover:after {
+         //       opacity: 1;
+         //    } //a:hover:after
+
+         @include breakpoint(max-width $medium) {
+            span#studio {
+               display: none;
+            }
+         } //breakpoint
+
+         @include breakpoint(max-width $small) {
+            span#design {
+               display: none;
+            }
+         } //breakpoint
 
       } //h3
-      span {
-         margin-right: 10px;
-      }
+
+      ul {
+         li {
+            @include span(2);
+            text-align: center;
+            height: 100%;
+            transition: all 0.5s ease-out;
+            float: left;
+            // position: relative;
+            // z-index: 1;
+            padding: {
+               right: 0;
+               left: 0;
+            }
+         a {
+            color: $white;
+            font-family: $sourceSans;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            padding: {
+               top: 12px;
+               bottom: 12px;
+            }
+            position: relative;
+            z-index: 3;
+
+            &.active {
+            background-color: $kuchiba;
+            @include background-image(
+               linear-gradient(
+                  bottom, lighten($kuchiba, 20), $kuchiba
+               )
+            );
+            @include box-shadow(
+               lighten($kuchiba, 10) 0 1px 10px
+            );
+            }
+
+            i {
+               // position: absolute;
+               // top: 10px;
+               // left: 10px;
+               padding-right: 5px;
+               font-size: 18px;
+               @include breakpoint($medium max-width) {
+                   display: none;
+               } //breakpoint medium
+            } //i
+
+            @include breakpoint($small max-width) {
+               i {
+                display: inline-block;
+                font-size: inherit;
+               } 
+               span {
+                display: none;
+               }
+            } //breakpoint small
+          } //a
+
+          @include gradientTransition;
+
+
+         } //li
+      } //ul
    } //main_nav
 
    &.navShadow {
