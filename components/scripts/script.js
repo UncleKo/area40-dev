@@ -119,5 +119,140 @@
       triggerElement: 'header nav'
    }).setPin('header nav').addTo(controller);
 
+
+
+   //Contact Form
+	var placeholder = function() {
+	
+			var nameField = document.getElementById("name");
+
+			nameField.onfocus = function() {
+				if ( nameField.value == "お名前") {
+					nameField.value = "";
+				}
+			};
+
+			nameField.onblur = function() {
+				if ( nameField.value == "") {
+					nameField.value = "お名前";
+				}
+			};
+			
+			
+			var emailField = document.getElementById("e_mail");
+
+			emailField.onfocus = function() {
+				if ( emailField.value == "メールアドレス") {
+					emailField.value = "";
+				}
+			};
+
+			emailField.onblur = function() {
+				if ( emailField.value == "") {
+					emailField.value = "メールアドレス";
+				}
+			};
+			
+			
+			var subjectField = document.getElementById("subject");
+
+			subjectField.onfocus = function() {
+				if ( subjectField.value == "件名") {
+					subjectField.value = "";
+				}
+			};
+
+			subjectField.onblur = function() {
+				if ( subjectField.value == "") {
+					subjectField.value = "件名";
+				}
+			};
+			
+			
+			var commentArea = document.getElementById("comments");
+
+			commentArea.onfocus = function() {
+				if ( commentArea.value == "コメント/お問い合わせ内容") {
+					commentArea.value = "";
+				}
+			};
+
+			commentArea.onblur = function() {
+				if ( commentArea.value == "") {
+					commentArea.value = "コメント/お問い合わせ内容";
+				}
+			};
+			
+		} //placeholder
+
+      // placeholder();
+
+
+	var Contact = {
+	
+		init: function() {
+	
+			var contactWrap = $('<div id="contact-wrap"></div>')
+												.appendTo('main')
+												.load( 'contact.html form#contact' )
+												.hide();
+
+			$('a#contact-link').on('click', function( e ) {		
+					
+					Contact.close.call(contactWrap);					
+					contactWrap.slideDown(700);	
+					placeholder();
+					// response();
+
+					e.preventDefault();
+			});
+		
+		},
+		
+		close: function() {
+		
+			var $this = $(this);
+		
+			if ( $this.find('span.close').length ) return;
+
+			$('<span class="close">X</span>')
+				.prependTo(this)
+				.on('click', function() {					
+					$this.slideUp(700);
+			});
+		
+		}
+	
+	} //Contact
+	
+	Contact.init();
+      
+   
+	var response = function() {
+	
+			$('form#contact').on('submit', function(e) {
+			
+				e.preventDefault();		
+			
+				$('#contact-form').append('<img src="/images/loading.gif" alt="Currently Loading" id="loading" />');
+				
+				$.post( '/send_email.php', $(this).serialize(), function(result) {
+				
+					$('#response').remove();
+					$('#contact-form').append('<div id="response">' + result + '</div>');
+					$('#loading').fadeOut(500, function() {
+						$(this).remove();
+						
+					});
+					
+				});
+				
+			});	
+		
+		} //response
+
+	// response();
+   
+
 })(); //on load
 

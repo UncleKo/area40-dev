@@ -95,56 +95,93 @@ header nav {
                right: 0;
                left: 0;
             }
-         a {
-            color: $white;
-            font-family: $sourceSans;
-            font-size: 20px;
-            font-weight: 400;
-            text-decoration: none;
-            display: inline-block;
-            width: 100%;
-            padding: {
-               top: 12px;
-               bottom: 12px;
-            }
-            position: relative;
-            z-index: 3;
-
-            &.active {
-            background-color: $kuchiba;
-            @include background-image(
-               linear-gradient(
-                  bottom, lighten($kuchiba, 20), $kuchiba
-               )
-            );
-            @include box-shadow(
-               lighten($kuchiba, 10) 0 1px 10px
-            );
-            }
-
-            i {
-               // position: absolute;
-               // top: 10px;
-               // left: 10px;
-               padding-right: 5px;
-               font-size: 18px;
-               @include breakpoint($medium max-width) {
-                   display: none;
-               } //breakpoint medium
-            } //i
-
-            @include breakpoint($small max-width) {
-               i {
-                display: inline-block;
-                font-size: inherit;
-               } 
-               span {
-                display: none;
+            a {
+               color: $white;
+               font-family: $sourceSans;
+               font-size: 20px;
+               font-weight: 400;
+               text-decoration: none;
+               display: inline-block;
+               width: 100%;
+               padding: {
+                  top: 12px;
+                  bottom: 12px;
                }
-            } //breakpoint small
-          } //a
+               position: relative;
+               z-index: 3;
 
-          @include gradientTransition;
+               &.active {
+               background-color: $kuchiba;
+               @include background-image(
+                  linear-gradient(
+                     bottom, lighten($kuchiba, 20), $kuchiba
+                  )
+               );
+               @include box-shadow(
+                  lighten($kuchiba, 10) 0 1px 10px
+               );
+               }
+
+               i {
+                  // position: absolute;
+                  // top: 10px;
+                  // left: 10px;
+                  padding-right: 5px;
+                  font-size: 18px;
+                  @include breakpoint($medium max-width) {
+                      display: none;
+                  } //breakpoint medium
+               } //i
+
+               @include breakpoint($small max-width) {
+                  i {
+                   display: inline-block;
+                   font-size: inherit;
+                  } 
+                  span {
+                   display: none;
+                  }
+               } //breakpoint small
+            } //a
+
+            @include gradientTransition;
+          
+            &#contact {
+               position: absolute;
+               top: 300px;
+               right: -80px;
+               padding: 0 10px;
+               @include breakpoint($medium) {
+                  // top: 300px;
+                  right: -10px;
+                  padding: 0 20px;
+               }
+               width: auto;
+               // font-family: $sourceSans;
+               // font-weight: 200;
+               background-color: $kuchiba;
+               @include background-image(
+                  linear-gradient(
+                     bottom, lighten($kuchiba, 20), $kuchiba
+                  )
+               );
+               @include border-radius(10px);
+               &:after {
+                  @include border-radius(10px);
+               }
+               &:hover {
+                  @include box-shadow(
+                     lighten($kuchiba, 10) 0 1px 10px
+                  );
+                  right: -10px;
+                  @include breakpoint($medium) {
+                     padding-right: 40px;
+                  }
+               } //li:hover
+               i, span {
+                  display: inline-block;
+               }
+            }
 
 
          } //li

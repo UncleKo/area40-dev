@@ -1,0 +1,46 @@
+#contact-form input[type="submit"]{width:70px; height:24px; padding:0; font-family:"&#12513; &#12452; &#12522; &#12458; ","Meiryo","Hiragino Kaku Gothic Pro",Verdana,Helvetica,Arial,sans-serif; font-weight:bold; border:none; color:white; cursor:pointer; margin:0; -moz-border-radius:3px;  -webkit-border-radius:3px; border-radius:3px; background:#ea821c; background:-webkit-gradient(linear,left top,right bottom,from(#e66700),to(#eaa41c)); background:-moz-linear-gradient(left,#e66700,#eaa41c); background:-o-linear-gradient(left,#e66700,#eaa41c); background:-ms-linear-gradient(left,#e66700,#eaa41c); background:linear-gradient(left,#e66700,#eaa41c); text-shadow:0 -1px 0 #999}
+#searchform input[type="submit"]:hover, 
+#commentform input[type="submit"]:hover, 
+#contact-form input[type="submit"]:hover{background:#e66700; background:-webkit-linear-gradient(top,#e66700,#eaa41c); background:-moz-linear-gradient(top,#e66700,#eaa41c); background:-o-linear-gradient(top,#e66700,#eaa41c); background:-ms-linear-gradient(top,#e66700,#eaa41c); background:linear-gradient(top,#e66700,#eaa41c)}
+#commentform input[type="text"], 
+#commentform textarea, 
+#contact-form input[type="text"], 
+#contact-form textarea{font-family:"&#12513; &#12452; &#12522; &#12458; ","Meiryo","&#12498; &#12521; &#12462; &#12494; &#35282; &#12468; Pro W3","Hiragino Kaku Gothic Pro",Helvetica,Arial,"MS P&#12468; &#12471; &#12483; &#12463; ","MS P Gothic",sans-serif;  -moz-border-radius:5px;  -webkit-border-radius:5px; border-radius:5px}
+
+#contact-form input[type="text"]{margin:0 0 1em}
+#contact-form textarea, 
+#commentform input[type="text"], 
+#commentform textarea{margin:0}
+
+#contact-form p, 
+#commentform p{margin-bottom:1em}
+#contact-form p.label, 
+#commentform p.label{margin:0}
+
+#contact-wrap {
+   position:fixed; 
+   top:60px; 
+   left:20px; 
+   z-index:30;
+   background:white;
+   padding:10px;
+   border:1px solid #666;
+   @include border-radius(5px);
+   @include box-shadow(#061b20 2px 2px 10px);
+   span.close {
+      cursor: pointer;
+      float: right;
+      font-size: 20px;
+      line-height: 18px;
+      color: $black;
+      text-shadow: 0 1px 0 $white;
+      opacity: 0.2;
+      &:hover {
+         opacity: 0.4;
+      }
+   }
+}
+#contact-form #response{border:1px solid #EAA41C;  -moz-border-radius:5px;  -webkit-border-radius:5px; border-radius:5px; padding:15px; margin-top:2em; max-width:540px}
+#contact-form #response h2{font-size:1.3em; color:#EAA41C}
+#contact-form #response h3{font-size:1.2em}
+

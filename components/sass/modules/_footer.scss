@@ -1,0 +1,103 @@
+footer {
+   z-index:100;
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   nav {
+      position: absolute;
+      bottom: 30px;
+      @include breakpoint($medium) {
+         bottom: 20px;
+      }
+      right: 0;
+      background: $black;
+      @include background-image(
+         linear-gradient(
+            top, lighten($black, 20), $black
+         )
+      );
+      padding: 1px;
+      @include border-radius(2px);
+
+      ul {
+         li {
+            padding: 1px;
+            a {
+               color: $white;
+               font-family: $sourceSans;
+               font-size: 20px;
+               font-weight: 400;
+               text-decoration: none;
+               display: block;
+               width: 16px;
+               height: 16px;
+               position: relative;
+               z-index: 3;
+
+               @include image_rep;
+               &#flickr {
+                  background: url('/images/socialmedia/flickr-16.png') no-repeat center center;
+               }
+               &#twitter {
+                  background: url('/images/socialmedia/twitter_16.png') no-repeat center center;
+               }
+               &#behance {
+                  background: url('/images/socialmedia/behance-16.png') no-repeat center center;
+               }
+               &#github {
+                  background: url('/images/socialmedia/github-16.png') no-repeat center center;
+               }
+               &#facebook {
+                  background: url('/images/socialmedia/facebook-16.png') no-repeat center center;
+               }
+               &#gplus {
+                  background: url('/images/socialmedia/google+-16.png') no-repeat center center;
+               }
+               @include breakpoint($medium) {
+                  width: 32px;
+                  height: 32px;
+                  &#flickr {
+                     background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
+                  }
+                  &#twitter {
+                     background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
+                  }
+                  &#behance {
+                     background: url('/images/socialmedia/behance-32.png') no-repeat center center;
+                  }
+                  &#github {
+                     background: url('/images/socialmedia/github-32.png') no-repeat center center;
+                  }
+                  &#facebook {
+                     background: url('/images/socialmedia/facebook-32.png') no-repeat center center;
+                  }
+                  &#gplus {
+                     background: url('/images/socialmedia/google+-32.png') no-repeat center center;
+                  }
+               } //breakpoint($medium)
+               transition: box-shadow .5s ease-out;
+               &:hover {
+                  @include box-shadow(
+                     lighten($kuchiba, 10) 0 1px 10px
+                  );
+                  // -webkit-box-shadow: 0 0 2px $white;
+                  // box-shadow: 0 0 2px $white;
+                  // @include border-radius(2px);
+               } a:hover
+            } //a
+            // @include gradientTransition; // a
+         } //li
+      } //ul
+
+   } //nav
+
+   p {
+      font-size: 12px;
+      line-height: 1.2;
+      padding: 0 10px;
+      background: $black;
+      color: $white;
+      margin-bottom: 0;
+   }
+
+} // footer
