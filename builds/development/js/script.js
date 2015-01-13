@@ -87,10 +87,12 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       var windowpos = $(window).scrollTop(),
          nav = $('header nav');
       nav.removeClass('navShadow');
+      $('h3#contact').removeClass('show');
       // nav.css('position', 'static');
 
       if (windowpos >= nav.offset().top) {
          nav.addClass('navShadow');
+         $('h3#contact').addClass('show');
          // nav.css('position', 'fixed');
          // nav.css('top', '0');
          // nav.css('left', '0');
@@ -221,7 +223,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
 					Contact.close.call(contactWrap);					
 					contactWrap.slideDown(700);	
 					placeholder();
-					// response();
+					response();
 
 					e.preventDefault();
 			});

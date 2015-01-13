@@ -5,6 +5,12 @@
    color:transparent;
 }
 
+@mixin centering {
+   @include display-flex();
+   @include align-items(center);
+   @include justify-content(center);
+}
+
 @mixin round_button($buttonBaseColor: #e95d4b) {
          @include background(
             linear-gradient(

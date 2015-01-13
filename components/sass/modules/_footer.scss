@@ -3,99 +3,181 @@ footer {
    position: fixed;
    right: 0;
    bottom: 0;
-   nav {
+   #contact {
       position: absolute;
-      bottom: 30px;
+      bottom: 300px;
+      right: 2500px;
+      transition: all 0.5s ease-out;
+      a {
+         padding: 0 10px;
+         color: $white;
+         font-family: $sourceSans;
+         font-size: 20px;
+         font-weight: 400;
+         text-decoration: none;
+         display: inline-block;
+         padding: {
+            top: 12px;
+            bottom: 12px;
+         }
+         position: relative;
+         z-index: 3;
+         i {
+            font-size: 18px;
+            padding-right: 5px;
+            // @include breakpoint ($small) {
+            //    padding: 0 10px;
+            // }
+         }
+      } //a
       @include breakpoint($medium) {
-         bottom: 20px;
+         padding-right: 20px;
       }
-      right: 0;
-      background: $black;
+      // width: 109px;
+      background-color: $kuchiba;
       @include background-image(
          linear-gradient(
-            top, lighten($black, 20), $black
+            bottom, lighten($kuchiba, 20), $kuchiba
          )
       );
-      padding: 1px;
-      @include border-radius(2px);
+      @include border-radius(10px);
+      &:after {
+         @include border-radius(10px);
+      }
+      // @include gradientTransition;
+      &.show {
+         right: -75px;
+         @include breakpoint($medium) {
+            right: -10px;
+         }
+      }
+      &:hover {
+         @include box-shadow(
+            lighten($kuchiba, 10) 0 1px 10px
+         );
+         right: -10px;
+         @include breakpoint($medium) {
+            padding-right: 40px;
+         }
+      } //li:hover
+      } //li#contact
 
       ul {
-         li {
-            padding: 1px;
-            a {
-               color: $white;
-               font-family: $sourceSans;
-               font-size: 20px;
-               font-weight: 400;
-               text-decoration: none;
-               display: block;
-               width: 16px;
-               height: 16px;
-               position: relative;
-               z-index: 3;
+         position: absolute;
+         bottom: 30px;
+         @include breakpoint($medium) {
+            bottom: 20px;
+         }
+         right: 0;
+         // background: $black;
+         // @include background-image(
+         //    linear-gradient(
+         //       top, lighten($black, 20), $black
+         //    )
+         // );
+         padding: 1px;
+         @include border-radius(2px);
+            li {
+               padding: 1px;
+               a {
+                  color: $white;
+                  font-family: $sourceSans;
+                  font-size: 20px;
+                  font-weight: 400;
+                  text-decoration: none;
+                  display: block;
+                  width: 16px;
+                  height: 16px;
+                  position: relative;
+                  z-index: 3;
 
-               @include image_rep;
-               &#flickr {
-                  background: url('/images/socialmedia/flickr-16.png') no-repeat center center;
-               }
-               &#twitter {
-                  background: url('/images/socialmedia/twitter_16.png') no-repeat center center;
-               }
-               &#behance {
-                  background: url('/images/socialmedia/behance-16.png') no-repeat center center;
-               }
-               &#github {
-                  background: url('/images/socialmedia/github-16.png') no-repeat center center;
-               }
-               &#facebook {
-                  background: url('/images/socialmedia/facebook-16.png') no-repeat center center;
-               }
-               &#gplus {
-                  background: url('/images/socialmedia/google+-16.png') no-repeat center center;
-               }
-               @include breakpoint($medium) {
-                  width: 32px;
-                  height: 32px;
+                  @include image_rep;
                   &#flickr {
-                     background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
+                     background: url('/images/socialmedia/flickr-16.png') no-repeat center center;
                   }
                   &#twitter {
-                     background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
+                     background: url('/images/socialmedia/twitter_16.png') no-repeat center center;
                   }
                   &#behance {
-                     background: url('/images/socialmedia/behance-32.png') no-repeat center center;
+                     background: url('/images/socialmedia/behance-16.png') no-repeat center center;
                   }
                   &#github {
-                     background: url('/images/socialmedia/github-32.png') no-repeat center center;
+                     background: url('/images/socialmedia/github-16.png') no-repeat center center;
                   }
                   &#facebook {
-                     background: url('/images/socialmedia/facebook-32.png') no-repeat center center;
+                     background: url('/images/socialmedia/facebook-16.png') no-repeat center center;
                   }
                   &#gplus {
-                     background: url('/images/socialmedia/google+-32.png') no-repeat center center;
+                     background: url('/images/socialmedia/google+-16.png') no-repeat center center;
                   }
-               } //breakpoint($medium)
-               transition: box-shadow .5s ease-out;
-               &:hover {
-                  @include box-shadow(
-                     lighten($kuchiba, 10) 0 1px 10px
-                  );
-                  // -webkit-box-shadow: 0 0 2px $white;
-                  // box-shadow: 0 0 2px $white;
-                  // @include border-radius(2px);
-               } a:hover
-            } //a
-            // @include gradientTransition; // a
-         } //li
-      } //ul
 
-   } //nav
+                  @include breakpoint($small) {
+                     width: 24px;
+                     height: 24px;
+                     &#flickr {
+                        background: url('/images/socialmedia/flickr-24.png') no-repeat center center;
+                     }
+                     &#twitter {
+                        background: url('/images/socialmedia/twitter-24.png') no-repeat center center;
+                     }
+                     &#behance {
+                        background: url('/images/socialmedia/behance-24.png') no-repeat center center;
+                     }
+                     &#github {
+                        background: url('/images/socialmedia/github-24.png') no-repeat center center;
+                     }
+                     &#facebook {
+                        background: url('/images/socialmedia/facebook-24.png') no-repeat center center;
+                     }
+                     &#gplus {
+                        background: url('/images/socialmedia/google+-24.png') no-repeat center center;
+                     }
+                  } //breakpoint($small)
+
+                  @include breakpoint($medium) {
+                     width: 32px;
+                     height: 32px;
+                     &#flickr {
+                        background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
+                     }
+                     &#twitter {
+                        background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
+                     }
+                     &#behance {
+                        background: url('/images/socialmedia/behance-32.png') no-repeat center center;
+                     }
+                     &#github {
+                        background: url('/images/socialmedia/github-32.png') no-repeat center center;
+                     }
+                     &#facebook {
+                        background: url('/images/socialmedia/facebook-32.png') no-repeat center center;
+                     }
+                     &#gplus {
+                        background: url('/images/socialmedia/google+-32.png') no-repeat center center;
+                     }
+                  } //breakpoint($medium)
+
+                  opacity: .8;
+                  transition: all .5s ease-out;
+                  &:hover {
+                     opacity: 1;
+                     @include box-shadow(
+                        lighten($kuchiba, 10) 0 1px 10px
+                     );
+                     // -webkit-box-shadow: 0 0 2px $white;
+                     // box-shadow: 0 0 2px $white;
+                     // @include border-radius(2px);
+                  } //a:hover
+               } //a
+            } //li
+         } //ul
+
 
    p {
       font-size: 12px;
       line-height: 1.2;
       padding: 0 10px;
-      background: $black;
+      background: rgba($black, .7);
       color: $white;
       margin-bottom: 0;
    }

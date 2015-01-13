@@ -15,10 +15,7 @@ header {
       -o-background-size: cover;
       background-size: cover;
 
-      @include display-flex();
-      @include align-items(center);
-      @include justify-content(center);
-
+      @include centering;
       .hgroup {
          position: relative;
             h1 {

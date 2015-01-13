@@ -5,7 +5,7 @@ header nav {
          top, lighten($usuao, 20), $usuao
       )
    );
-   z-index:100;
+   z-index:50;
    width: 100%;
    color: #fff;
    // height: 44px;
@@ -146,43 +146,46 @@ header nav {
 
             @include gradientTransition;
           
-            &#contact {
-               position: absolute;
-               top: 300px;
-               right: -80px;
-               padding: 0 10px;
-               @include breakpoint($medium) {
-                  // top: 300px;
-                  right: -10px;
-                  padding: 0 20px;
-               }
-               width: auto;
-               // font-family: $sourceSans;
-               // font-weight: 200;
-               background-color: $kuchiba;
-               @include background-image(
-                  linear-gradient(
-                     bottom, lighten($kuchiba, 20), $kuchiba
-                  )
-               );
-               @include border-radius(10px);
-               &:after {
-                  @include border-radius(10px);
-               }
-               &:hover {
-                  @include box-shadow(
-                     lighten($kuchiba, 10) 0 1px 10px
-                  );
-                  right: -10px;
-                  @include breakpoint($medium) {
-                     padding-right: 40px;
-                  }
-               } //li:hover
-               i, span {
-                  display: inline-block;
-               }
-            }
-
+            // &#contact {
+            //    position: absolute;
+            //    top: 300px;
+            //    right: -80px;
+            //    padding: 0 10px;
+            //    @include breakpoint($medium) {
+            //       // top: 300px;
+            //       right: -10px;
+            //       padding: 0 20px;
+            //    }
+            //    width: auto;
+            //    // font-family: $sourceSans;
+            //    // font-weight: 200;
+            //    background-color: $kuchiba;
+            //    @include background-image(
+            //       linear-gradient(
+            //          bottom, lighten($kuchiba, 20), $kuchiba
+            //       )
+            //    );
+            //    @include border-radius(10px);
+            //    &:after {
+            //       @include border-radius(10px);
+            //    }
+            //    &:hover {
+            //       @include box-shadow(
+            //          lighten($kuchiba, 10) 0 1px 10px
+            //       );
+            //       right: -10px;
+            //       @include breakpoint($medium) {
+            //          padding-right: 40px;
+            //       }
+            //    } //li:hover
+            //    i, span {
+            //       display: inline-block;
+            //    }
+            //    display: none;
+            //    &.show {
+            //       display: block;
+            //    }
+            // } //li#contact
 
          } //li
       } //ul
