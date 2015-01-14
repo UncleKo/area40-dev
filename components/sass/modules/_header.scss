@@ -16,8 +16,10 @@ header {
       background-size: cover;
 
       @include centering;
+
       .hgroup {
          position: relative;
+         // z-index: 100;
             h1 {
                // color: $white;
                // border: 2px solid darken(#fff, 10);
@@ -63,3 +65,4 @@ header {
 
    } //fullheight
 } //header
+

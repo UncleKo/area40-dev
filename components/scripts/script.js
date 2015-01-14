@@ -68,12 +68,12 @@
       var windowpos = $(window).scrollTop(),
          nav = $('header nav');
       nav.removeClass('navShadow');
-      $('h3#contact').removeClass('show');
+      $('h3#contact').removeClass('slideIn');
       // nav.css('position', 'static');
 
       if (windowpos >= nav.offset().top) {
          nav.addClass('navShadow');
-         $('h3#contact').addClass('show');
+         $('h3#contact').addClass('slideIn');
          // nav.css('position', 'fixed');
          // nav.css('top', '0');
          // nav.css('left', '0');
@@ -189,20 +189,23 @@
 
       // placeholder();
 
+   var ghost = $('#ghost');
 
 	var Contact = {
 	
 		init: function() {
+
+         // var ghost = $('<section id="ghost" class="fullheight"></section>');
 	
 			var contactWrap = $('<div id="contact-wrap"></div>')
-												.appendTo('main')
+												.appendTo('#ghost')
 												.load( 'contact.html form#contact' )
 												.hide();
 
-			$('a#contact-link').on('click', function( e ) {		
-					
+			$('a#contact-link').on('click', function(e) {		
+               ghost.css('z-index', '90');
 					Contact.close.call(contactWrap);					
-					contactWrap.slideDown(700);	
+					contactWrap.fadeIn(1500);	
 					placeholder();
 					response();
 
@@ -220,7 +223,8 @@
 			$('<span class="close">X</span>')
 				.prependTo(this)
 				.on('click', function() {					
-					$this.slideUp(700);
+					$this.fadeOut(1000);
+               ghost.css('z-index', '-1');
 			});
 		
 		}

@@ -1,7 +1,4 @@
 #process {
-   h2 {
-      @include trailer(3, 40px);
-   }
 
    div {
       @include clearfix;

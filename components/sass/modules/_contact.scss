@@ -29,29 +29,33 @@
          );
       } //hover
    }//submit
+
    input[type="text"], textarea {
       font-family: $mainFont;
       @include border-radius(5px);
    }
+
    input[type="text"] {
       margin:0 0 1em;
    }
+
    textarea { 
       margin:0;
       height:100px;
    }
+
    p { margin-bottom:1em }
    p.label { margin:0 }
 
    #response {
-      border:1px solid #EAA41C;
+      border:1px solid $yamabuki;
       @include border-radius(5px);
       padding:15px;
       margin-top:2em;
       max-width:540px
       h2 {
          font-size:1.3em;
-         color:#EAA41C;
+         color:$yamabuki;
       }
       h3 {
          font-size:1.2em;
@@ -61,14 +65,8 @@
 } //#contact-form
 
 #contact-wrap {
-   position:fixed; 
-   top:50px; 
-   left:5px; 
-   // @include breakpoint($small) {
-   //    top: 60px;
-   //    left: 10px;
-   // }
-   z-index:100;
+   position: relative; 
+   width: 305px;
    background:white;
    padding:10px;
    border:1px solid #666;

@@ -1,6 +1,6 @@
 footer {
-   z-index:100;
    position: fixed;
+   z-index:100;
    right: 0;
    bottom: 0;
    #contact {
@@ -45,7 +45,7 @@ footer {
          @include border-radius(10px);
       }
       // @include gradientTransition;
-      &.show {
+      &.slideIn {
          right: -75px;
          @include breakpoint($medium) {
             right: -10px;
@@ -60,117 +60,118 @@ footer {
             padding-right: 40px;
          }
       } //li:hover
-      } //li#contact
+   } //#contact
+   
 
-      ul {
-         position: absolute;
-         bottom: 30px;
-         @include breakpoint($medium) {
-            bottom: 20px;
-         }
-         right: 0;
-         // background: $black;
-         // @include background-image(
-         //    linear-gradient(
-         //       top, lighten($black, 20), $black
-         //    )
-         // );
-         padding: 1px;
-         @include border-radius(2px);
-            li {
-               padding: 1px;
-               a {
-                  color: $white;
-                  font-family: $sourceSans;
-                  font-size: 20px;
-                  font-weight: 400;
-                  text-decoration: none;
-                  display: block;
-                  width: 16px;
-                  height: 16px;
-                  position: relative;
-                  z-index: 3;
+   ul {
+      position: absolute;
+      bottom: 30px;
+      @include breakpoint($medium) {
+         bottom: 20px;
+      }
+      right: 0;
+      // background: $black;
+      // @include background-image(
+      //    linear-gradient(
+      //       top, lighten($black, 20), $black
+      //    )
+      // );
+      padding: 1px;
+      @include border-radius(2px);
+         li {
+            padding: 1px;
+            a {
+               color: $white;
+               font-family: $sourceSans;
+               font-size: 20px;
+               font-weight: 400;
+               text-decoration: none;
+               display: block;
+               width: 16px;
+               height: 16px;
+               position: relative;
+               z-index: 3;
 
-                  @include image_rep;
+               @include image_rep;
+               &#flickr {
+                  background: url('/images/socialmedia/flickr-16.png') no-repeat center center;
+               }
+               &#twitter {
+                  background: url('/images/socialmedia/twitter_16.png') no-repeat center center;
+               }
+               &#behance {
+                  background: url('/images/socialmedia/behance-16.png') no-repeat center center;
+               }
+               &#github {
+                  background: url('/images/socialmedia/github-16.png') no-repeat center center;
+               }
+               &#facebook {
+                  background: url('/images/socialmedia/facebook-16.png') no-repeat center center;
+               }
+               &#gplus {
+                  background: url('/images/socialmedia/google+-16.png') no-repeat center center;
+               }
+
+               @include breakpoint($small) {
+                  width: 24px;
+                  height: 24px;
                   &#flickr {
-                     background: url('/images/socialmedia/flickr-16.png') no-repeat center center;
+                     background: url('/images/socialmedia/flickr-24.png') no-repeat center center;
                   }
                   &#twitter {
-                     background: url('/images/socialmedia/twitter_16.png') no-repeat center center;
+                     background: url('/images/socialmedia/twitter-24.png') no-repeat center center;
                   }
                   &#behance {
-                     background: url('/images/socialmedia/behance-16.png') no-repeat center center;
+                     background: url('/images/socialmedia/behance-24.png') no-repeat center center;
                   }
                   &#github {
-                     background: url('/images/socialmedia/github-16.png') no-repeat center center;
+                     background: url('/images/socialmedia/github-24.png') no-repeat center center;
                   }
                   &#facebook {
-                     background: url('/images/socialmedia/facebook-16.png') no-repeat center center;
+                     background: url('/images/socialmedia/facebook-24.png') no-repeat center center;
                   }
                   &#gplus {
-                     background: url('/images/socialmedia/google+-16.png') no-repeat center center;
+                     background: url('/images/socialmedia/google+-24.png') no-repeat center center;
                   }
+               } //breakpoint($small)
 
-                  @include breakpoint($small) {
-                     width: 24px;
-                     height: 24px;
-                     &#flickr {
-                        background: url('/images/socialmedia/flickr-24.png') no-repeat center center;
-                     }
-                     &#twitter {
-                        background: url('/images/socialmedia/twitter-24.png') no-repeat center center;
-                     }
-                     &#behance {
-                        background: url('/images/socialmedia/behance-24.png') no-repeat center center;
-                     }
-                     &#github {
-                        background: url('/images/socialmedia/github-24.png') no-repeat center center;
-                     }
-                     &#facebook {
-                        background: url('/images/socialmedia/facebook-24.png') no-repeat center center;
-                     }
-                     &#gplus {
-                        background: url('/images/socialmedia/google+-24.png') no-repeat center center;
-                     }
-                  } //breakpoint($small)
+               @include breakpoint($medium) {
+                  width: 32px;
+                  height: 32px;
+                  &#flickr {
+                     background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
+                  }
+                  &#twitter {
+                     background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
+                  }
+                  &#behance {
+                     background: url('/images/socialmedia/behance-32.png') no-repeat center center;
+                  }
+                  &#github {
+                     background: url('/images/socialmedia/github-32.png') no-repeat center center;
+                  }
+                  &#facebook {
+                     background: url('/images/socialmedia/facebook-32.png') no-repeat center center;
+                  }
+                  &#gplus {
+                     background: url('/images/socialmedia/google+-32.png') no-repeat center center;
+                  }
+               } //breakpoint($medium)
 
-                  @include breakpoint($medium) {
-                     width: 32px;
-                     height: 32px;
-                     &#flickr {
-                        background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
-                     }
-                     &#twitter {
-                        background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
-                     }
-                     &#behance {
-                        background: url('/images/socialmedia/behance-32.png') no-repeat center center;
-                     }
-                     &#github {
-                        background: url('/images/socialmedia/github-32.png') no-repeat center center;
-                     }
-                     &#facebook {
-                        background: url('/images/socialmedia/facebook-32.png') no-repeat center center;
-                     }
-                     &#gplus {
-                        background: url('/images/socialmedia/google+-32.png') no-repeat center center;
-                     }
-                  } //breakpoint($medium)
-
-                  opacity: .8;
-                  transition: all .5s ease-out;
-                  &:hover {
-                     opacity: 1;
-                     @include box-shadow(
-                        lighten($kuchiba, 10) 0 1px 10px
-                     );
-                     // -webkit-box-shadow: 0 0 2px $white;
-                     // box-shadow: 0 0 2px $white;
-                     // @include border-radius(2px);
-                  } //a:hover
-               } //a
-            } //li
-         } //ul
+               opacity: .8;
+               transition: all .5s ease-out;
+               &:hover {
+                  opacity: 1;
+                  @include box-shadow(
+                     lighten($kuchiba, 10) 0 1px 10px
+                  );
+                  // -webkit-box-shadow: 0 0 2px $white;
+                  // box-shadow: 0 0 2px $white;
+                  // @include border-radius(2px);
+               } //a:hover
+            } //a
+         } //li
+      } //ul
 
 
    p {
@@ -183,3 +184,4 @@ footer {
    }
 
 } // footer
+

@@ -40,6 +40,9 @@ body {
       @include leader(2, 40px);
       // @include trailer(4, 40px);
    }
+   &#process h2 {
+      @include trailer(3, 40px);
+   }
 
    h3 {
       font-family: $notoSans;

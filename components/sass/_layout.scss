@@ -1,4 +1,5 @@
 .scene {
+   position: relative;
    padding: rhythm(4) 0; 
    &#as_housing {
       padding-top: 0;
@@ -15,6 +16,32 @@
       } //div
    } //breakpoint
 } //.scene
+
+#ghost {
+   width: 100%;
+   position: fixed;
+   z-index:-1;
+   top: 0;
+   left: 0;
+   @include centering;
+} //#ghost
+
+
+.no-js {
+   header .fullheight{
+      height: 500px;
+      @include breakpoint($small) {
+         height: 600px;
+      }
+   }
+   footer #contact {
+      right: -75px;
+      @include breakpoint($medium) {
+         right: -10px;
+      }
+   } //footer
+} //.no-js
+
 
 
 /* ----------------------------------------------------------- */
