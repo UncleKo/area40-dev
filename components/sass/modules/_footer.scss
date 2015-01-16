@@ -10,7 +10,7 @@ footer {
       transition: all 0.5s ease-out;
       a {
          padding: 0 10px;
-         color: $white;
+         color:darken($kihada, 30);
          font-family: $sourceSans;
          font-size: 20px;
          font-weight: 400;
@@ -29,18 +29,23 @@ footer {
             //    padding: 0 10px;
             // }
          }
+         @include single-text-shadow(darken($kihada, 20), -1px, -1px);
       } //a
       @include breakpoint($medium) {
          padding-right: 20px;
       }
       // width: 109px;
-      background-color: $kuchiba;
+      background-color: $kihada;
       @include background-image(
          linear-gradient(
-            bottom, lighten($kuchiba, 20), $kuchiba
+            bottom, lighten($kihada, 20), $kihada
          )
       );
+      @include box-shadow(
+         darken($kihada, 20) 0 1px 5px
+      );
       @include border-radius(10px);
+      border: 1px solid $kihada;
       &:after {
          @include border-radius(10px);
       }
@@ -53,7 +58,7 @@ footer {
       }
       &:hover {
          @include box-shadow(
-            lighten($kuchiba, 10) 0 1px 10px
+            lighten($kihada, 10) 0 1px 10px
          );
          right: -10px;
          @include breakpoint($medium) {

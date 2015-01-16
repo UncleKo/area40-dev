@@ -67,14 +67,11 @@
    // Not to pick up 0
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
-   // console.log(randomNumber);
-   var randomImg = function () {
-      // $('header .fullheight').css("backgroundImage").fadeOut();
-      randomNumber = Math.ceil(Math.random()*bgImageTotal);
-      $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)').hide().fadeIn(1000);	
-      // setTimeout(randomImg, 10000);
-   }
-   randomImg();
+   randomNumber = Math.ceil(Math.random()*bgImageTotal);
+
+if(!isTouch) {
+   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+}
    
 
 

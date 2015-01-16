@@ -7,25 +7,29 @@
       font-weight:400; 
       font-size: 20px;
       border:none;
-      color:white;
+      color:darken($kihada, 30);
       cursor:pointer;
       margin:0;
       @include border-radius(3px);
-      text-shadow:0 -1px 0 darken($kuchiba, 20);
-      background:$kuchiba; 
+      text-shadow:0 -1px 0 darken($kihada, 30);
+      background-color: $kihada;
       @include background-image(
          linear-gradient(
-            bottom, lighten($kuchiba, 20), $kuchiba
+            bottom, lighten($kihada, 10), $kihada
          )
       );
+      @include box-shadow(
+         darken($kihada, 20) 0 1px 5px
+      );
+      // border: 1px solid $kihada;
       &:hover {
          @include background-image(
             linear-gradient(
-               top, lighten($yamabuki, 20), $yamabuki
+               top, lighten($kihada, 10), $kihada
             )
          );
          @include box-shadow(
-            lighten($kuchiba, 10) 0 1px 10px
+            lighten($kihada, 10) 0 1px 10px
          );
       } //hover
    }//submit

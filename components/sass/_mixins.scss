@@ -40,7 +40,7 @@
 // Gradient Transition Hack!!
 @mixin gradientTransition(
    $direction: top,
-   $color: $yamabuki,
+   $color: $kihada,
    $duration: 0.5s,
    $ease: ease-out
 ) {
@@ -57,7 +57,7 @@
 
          @include background-image(
             linear-gradient(
-               $direction, lighten($color, 20), $color
+               $direction, darken($color, 20), $color
             )
          );
 

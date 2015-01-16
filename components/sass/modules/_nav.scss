@@ -2,7 +2,7 @@ header nav {
    @include clearfix;
    @include background-image(
       linear-gradient(
-         top, lighten($usuao, 20), $usuao
+         top, lighten($omeshicha, 20), $omeshicha
       )
    );
    z-index:50;
@@ -21,13 +21,20 @@ header nav {
             bottom: 0;
          }
          font-family: $fontHelvetica;
-         @include button;
-         // @include box-shadow(
-         //    lighten($kuchiba, 10) 0 1px 10px
-         // );
+         // @include button($kihada);
+         background: $kihada;
+         @include background-image(
+            linear-gradient(
+               bottom, darken($kihada, 20), $kihada
+            )
+         );
+         @include gradientTransition;
+         @include box-shadow(
+            lighten($kihada, 10) 0 1px 10px
+         );
          
          a {
-            color: $white;
+            color:darken($kihada, 30);
             font-weight: bold;
             text-decoration: none;
             display: block;
@@ -35,7 +42,7 @@ header nav {
             text-align: center;
             position: relative;
             z-index: 3;
-            // @include single-text-shadow(darken($usuao, 10), -1px, -1px);
+            // @include single-text-shadow(darken($kihada, 20), -1px, -1px);
          } // a
 
          @include breakpoint(max-width $medium) {
@@ -81,17 +88,26 @@ header nav {
                position: relative;
                z-index: 3;
 
+               &:hover {
+                  color:darken($kihada, 30);
+                  @include box-shadow(
+                     lighten($kihada, 10) 0 2px 10px
+                  );
+               } //hover
+
                &.active {
-               background-color: $kuchiba;
-               @include background-image(
-                  linear-gradient(
-                     bottom, lighten($kuchiba, 20), $kuchiba
-                  )
-               );
-               @include box-shadow(
-                  lighten($kuchiba, 10) 0 1px 10px
-               );
-               }
+                  color:darken($kihada, 30);
+                  background-color: $kihada;
+                  background: $kihada;
+                  @include background-image(
+                     linear-gradient(
+                        bottom, darken($kihada, 20), $kihada
+                     )
+                  );
+                  @include box-shadow(
+                     lighten($kihada, 10) 0 1px 10px
+                  );
+               } //active
 
                i {
                   // position: absolute;
@@ -123,11 +139,11 @@ header nav {
 
    &.navShadow {
       @include box-shadow(
-         darken($usuao, 10) 0 2px 10px
+         darken($omeshicha, 10) 0 2px 10px
       );
       h3:hover {
          @include box-shadow(
-            darken($kuchiba, 10) 0 2px 10px
+            darken($kihada, 10) 0 2px 10px
          );
       }
    } //navShadow
