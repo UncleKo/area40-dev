@@ -40,6 +40,14 @@ body {
       @include leader(2, 40px);
       // @include trailer(4, 40px);
    }
+   &#intro h2:not(:nth-child(2)) {
+      font-family: $notoSans;
+      font-weight: 100;
+      @include adjust-font-size-to(30px);
+      @include leader(7, 30px);
+      // @include trailer(1, 30px);
+      line-height: 40px; //To fix the auto line-height
+   }
    &#process h2 {
       @include trailer(3, 40px);
    }

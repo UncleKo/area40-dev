@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 14, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -114,10 +114,19 @@ body {
   margin-top: 0.4em;
 }
 /* line 43, ../../../components/sass/_base.scss */
+.scene#intro h2:not(:nth-child(2)) {
+  font-family: "Noto Sans Japanese", "&#12513;&#12452;&#12522;&#12458;", "Meiryo", "&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3", "Hiragino Kaku Gothic Pro", "MS P&#12468;&#12471;&#12483;&#12463;", "MS P Gothic", sans-serif;
+  font-weight: 100;
+  font-size: 1.875em;
+  line-height: 1.33333em;
+  margin-top: 1.86667em;
+  line-height: 40px;
+}
+/* line 51, ../../../components/sass/_base.scss */
 .scene#process h2 {
   margin-bottom: 0.6em;
 }
-/* line 47, ../../../components/sass/_base.scss */
+/* line 55, ../../../components/sass/_base.scss */
 .scene h3 {
   font-family: "Noto Sans Japanese", "&#12513;&#12452;&#12522;&#12458;", "Meiryo", "&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3", "Hiragino Kaku Gothic Pro", "MS P&#12468;&#12471;&#12483;&#12463;", "MS P Gothic", sans-serif;
   font-weight: 100;
@@ -128,7 +137,7 @@ body {
   line-height: 40px;
 }
 
-/* line 58, ../../../components/sass/_base.scss */
+/* line 66, ../../../components/sass/_base.scss */
 p {
   font-size: 0.875em;
   line-height: 1.71429em;
@@ -158,11 +167,11 @@ p {
 }
 /* line 9, ../../../components/sass/_layout.scss */
 .scene .container {
-  max-width: 95%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
 .scene .container:after {
   content: " ";
   display: block;
@@ -184,7 +193,7 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
   .scene .container:after {
     content: " ";
     display: block;
@@ -192,37 +201,22 @@ p {
   }
 }
 
-/* line 20, ../../../components/sass/_layout.scss */
-#ghost {
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-/* line 31, ../../../components/sass/_layout.scss */
+/* line 22, ../../../components/sass/_layout.scss */
 .no-js header .fullheight {
   height: 500px;
 }
 @media (min-width: 650px) {
-  /* line 31, ../../../components/sass/_layout.scss */
+  /* line 22, ../../../components/sass/_layout.scss */
   .no-js header .fullheight {
     height: 600px;
   }
 }
-/* line 37, ../../../components/sass/_layout.scss */
+/* line 28, ../../../components/sass/_layout.scss */
 .no-js footer #contact {
   right: -75px;
 }
 @media (min-width: 960px) {
-  /* line 37, ../../../components/sass/_layout.scss */
+  /* line 28, ../../../components/sass/_layout.scss */
   .no-js footer #contact {
     right: -10px;
   }
@@ -231,7 +225,7 @@ p {
 /* ----------------------------------------------------------- */
 /* ::Debugs and #grid by Jon Gibbins */
 /* ----------------------------------------------------------- */
-/* line 51, ../../../components/sass/_layout.scss */
+/* line 42, ../../../components/sass/_layout.scss */
 #grid {
   width: 100%;
   position: absolute;
@@ -239,7 +233,7 @@ p {
   left: 0;
 }
 
-/* line 58, ../../../components/sass/_layout.scss */
+/* line 49, ../../../components/sass/_layout.scss */
 #grid div.horiz {
   height: 8px;
   border-bottom: 1px solid #ddd;
@@ -272,6 +266,7 @@ header .fullheight {
 /* line 20, ../../../components/sass/modules/_header.scss */
 header .fullheight .hgroup {
   position: relative;
+  z-index: 100;
 }
 /* line 23, ../../../components/sass/modules/_header.scss */
 header .fullheight .hgroup h1 {
@@ -343,7 +338,7 @@ header nav #main_nav {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
 header nav #main_nav:after {
   content: " ";
   display: block;
@@ -851,6 +846,7 @@ footer p {
 
 /* line 2, ../../../components/sass/modules/_contact.scss */
 #contact-form input[type="submit"] {
+  width: 100%;
   padding: 5px 20px;
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -951,6 +947,248 @@ footer p {
 /* line 83, ../../../components/sass/modules/_contact.scss */
 #contact-wrap span.close:hover {
   opacity: 0.4;
+}
+
+/* line 89, ../../../components/sass/modules/_contact.scss */
+#ghost {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 98, ../../../components/sass/modules/_contact.scss */
+.no-js #ghost {
+  z-index: 90;
+}
+
+/* line 102, ../../../components/sass/modules/_contact.scss */
+#contact-page {
+  padding-top: 50px;
+}
+/* line 104, ../../../components/sass/modules/_contact.scss */
+#contact-page #contact-form {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+#contact-page #contact-form:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 3, ../../../components/sass/modules/_colors.scss */
+#color-test h1 {
+  margin-bottom: 0.53333em;
+}
+/* line 7, ../../../components/sass/modules/_colors.scss */
+#color-test div.square {
+  width: 100%;
+  height: 100px;
+}
+@media (min-width: 650px) {
+  /* line 7, ../../../components/sass/modules/_colors.scss */
+  #color-test div.square {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    height: 10em;
+  }
+}
+@media (min-width: 960px) {
+  /* line 7, ../../../components/sass/modules/_colors.scss */
+  #color-test div.square {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    height: 15em;
+  }
+}
+/* line 3, ../../../components/sass/_mixins.scss */
+#color-test div div:nth-child(2):before, #color-test div div:nth-child(2):after {
+  content: '';
+  display: table;
+}
+/* line 8, ../../../components/sass/_mixins.scss */
+#color-test div div:nth-child(2):after {
+  clear: both;
+}
+/* line 25, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(2) div:first-child {
+  background: #F596AA;
+}
+/* line 28, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(2) div:nth-child(2) {
+  background: #91B493;
+}
+/* line 31, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(2) div:nth-child(3) {
+  background: #FFB11B;
+}
+/* line 34, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(2) div:nth-child(4) {
+  background: #E2943B;
+}
+/* line 41, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(3) div:first-child {
+  background: #7DB9DE;
+}
+/* line 44, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(3) div:nth-child(2) {
+  background: #51A8DD;
+}
+/* line 47, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(3) div:nth-child(3) {
+  background: #2EA9DF;
+}
+/* line 50, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(3) div:nth-child(4) {
+  background: #3A8FB7;
+}
+/* line 57, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(4) div:first-child {
+  background: #6C6024;
+}
+/* line 60, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(4) div:nth-child(2) {
+  background: #86C166;
+}
+/* line 63, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(4) div:nth-child(3) {
+  background: #E8B647;
+}
+/* line 66, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(4) div:nth-child(4) {
+  background: #FBE251;
+}
+/* line 73, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(5) div:first-child {
+  background: #CC543A;
+}
+/* line 76, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(5) div:nth-child(2) {
+  background: #376B6D;
+}
+/* line 79, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(5) div:nth-child(3) {
+  background: #FB9966;
+}
+/* line 82, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(5) div:nth-child(4) {
+  background: #FEDFE1;
+}
+/* line 89, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(6) div:first-child {
+  background: #E83015;
+}
+/* line 92, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(6) div:nth-child(2) {
+  background: #CB1B45;
+}
+/* line 95, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(6) div:nth-child(3) {
+  background: #DB4D6D;
+}
+/* line 98, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(6) div:nth-child(4) {
+  background: #F75C2F;
+}
+/* line 105, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(7) div:first-child {
+  background: #877F6C;
+}
+/* line 108, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(7) div:nth-child(2) {
+  background: #897D55;
+}
+/* line 111, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(7) div:nth-child(3) {
+  background: #B4A582;
+}
+/* line 114, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(7) div:nth-child(4) {
+  background: #F7D94C;
+}
+/* line 121, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(8) div:first-child {
+  background: #A8D8B9;
+}
+/* line 124, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(8) div:nth-child(2) {
+  background: #5DAC81;
+}
+/* line 127, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(8) div:nth-child(3) {
+  background: #00896C;
+}
+/* line 130, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(8) div:nth-child(4) {
+  background: #24936E;
+}
+/* line 137, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(9) div:first-child {
+  background: #005CAF;
+}
+/* line 140, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(9) div:nth-child(2) {
+  background: #DDD23B;
+}
+/* line 143, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(9) div:nth-child(3) {
+  background: #78C2C4;
+}
+/* line 146, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(9) div:nth-child(4) {
+  background: #33A6B8;
+}
+/* line 153, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(10) div:first-child {
+  background: #1E88A8;
+}
+/* line 156, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(10) div:nth-child(2) {
+  background: #81C7D4;
+}
+/* line 159, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(10) div:nth-child(3) {
+  background: #58B2DC;
+}
+/* line 162, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(10) div:nth-child(4) {
+  background: #3A8FB7;
+}
+/* line 169, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(11) div:first-child {
+  background: #B481BB;
+}
+/* line 172, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(11) div:nth-child(2) {
+  background: #C1328E;
+}
+/* line 175, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(11) div:nth-child(3) {
+  background: #E03C8A;
+}
+/* line 178, ../../../components/sass/modules/_colors.scss */
+#color-test div div:nth-child(11) div:nth-child(4) {
+  background: #828282;
 }
 
 /*# sourceMappingURL=style.css.map */

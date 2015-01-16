@@ -39,19 +39,21 @@
       </nav>
    </header>
    <main>
-   <form id="contact" action="/send_email.php" method="post">
-      <div id="contact-form">
-         <p class="label"><label for="name">Name</label></p>
-         <p><input id="name" class="span4" type="text" name="name" value="お名前" /></p>
-         <p class="label"><label for="email">Email Address</label></p>
-         <p><input id="e_mail" class="span4" type="text" name="email" value="メールアドレス" /></p>
-         <p class="label"><label for="subject">Subject</label></p>
-         <p><input id="subject" class="span4" type="text" name="subject" value="件名" /></p>
-         <p class="label"><label for="comments">Comments/Concerns</label></p>
-         <p><textarea id="comments" class="span5" name="comments">コメント/お問い合わせ内容</textarea></p>
-         <p><input id="submit" type="submit" name="submit" value="submit" /></p>
-      </div>
-</form>
+   <section id="contact-page" class="fullheight">
+      <form id="contact" action="/send_email.php" method="post">
+         <div id="contact-form">
+            <p class="label"><label for="name">Name</label></p>
+            <p><input id="name" class="span4" type="text" name="name" value="お名前" /></p>
+            <p class="label"><label for="email">Email Address</label></p>
+            <p><input id="e_mail" class="span4" type="text" name="email" value="メールアドレス" /></p>
+            <p class="label"><label for="subject">Subject</label></p>
+            <p><input id="subject" class="span4" type="text" name="subject" value="件名" /></p>
+            <p class="label"><label for="comments">Comments/Concerns</label></p>
+            <p><textarea id="comments" class="span5" name="comments">コメント/お問い合わせ内容</textarea></p>
+            <p><input id="submit" type="submit" name="submit" value="submit" /></p>
+         </div>
+      </form>
+   </section>
    </main>
    <footer>
       <h3 id="contact"><a id="contact-link" href="contact.html"><i class="fa fa-mail-forward"></i><span>Contact</span></a></h3>

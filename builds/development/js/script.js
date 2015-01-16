@@ -36,6 +36,28 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       fullheight();
    }); //on resize
 
+
+   //Square Grid
+   var sheight = function() {
+      var swidth = $('.square').css('width');
+
+      $('.square').css('height', swidth);
+   }
+
+   // var winwidth = $(window).width();
+   
+   if($(window).width() > 650) { 
+      sheight();
+   }
+
+   $(window).resize(function() {
+      if($(window).width() > 650) { 
+         sheight();
+      }
+   }); //on resize
+
+
+
    // Random Background Image
    // function changeImg(imgNumber) {
    //    var myImages = ["images/background/1.jpg", "images/background/2.jpg", "images/background/3.jpg", "images/background/4.jpg","images/background/5.jpg", "images/background/6.jpg"]; 
@@ -62,11 +84,17 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    bgImageTotal=18;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
    // Not to pick up 0
-   randomNumber = Math.ceil(Math.random()*bgImageTotal);
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
    // console.log(randomNumber);
-   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+   var randomImg = function () {
+      // $('header .fullheight').css("backgroundImage").fadeOut();
+      randomNumber = Math.ceil(Math.random()*bgImageTotal);
+      $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)').hide().fadeIn(1000);	
+      // setTimeout(randomImg, 10000);
+   }
+   randomImg();
+   
 
 
    // Animated Scrolling

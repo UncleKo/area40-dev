@@ -7,7 +7,7 @@
    @include trailer(4);
    @include clearfix;
    .container {
-      @include container(95%);
+      @include container(100%);
       @include clearfix;
    }
    @include breakpoint($medium) {
@@ -16,15 +16,6 @@
       } //div
    } //breakpoint
 } //.scene
-
-#ghost {
-   width: 100%;
-   position: fixed;
-   z-index:-1;
-   top: 0;
-   left: 0;
-   @include centering;
-} //#ghost
 
 
 .no-js {

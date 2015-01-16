@@ -36,6 +36,28 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       fullheight();
    }); //on resize
 
+
+   //Square Grid
+   var sheight = function() {
+      var swidth = $('.square').css('width');
+
+      $('.square').css('height', swidth);
+   }
+
+   // var winwidth = $(window).width();
+   
+   if($(window).width() > 650) { 
+      sheight();
+   }
+
+   $(window).resize(function() {
+      if($(window).width() > 650) { 
+         sheight();
+      }
+   }); //on resize
+
+
+
    // Random Background Image
    // function changeImg(imgNumber) {
    //    var myImages = ["images/background/1.jpg", "images/background/2.jpg", "images/background/3.jpg", "images/background/4.jpg","images/background/5.jpg", "images/background/6.jpg"]; 
@@ -62,11 +84,17 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    bgImageTotal=18;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
    // Not to pick up 0
-   randomNumber = Math.ceil(Math.random()*bgImageTotal);
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
    // console.log(randomNumber);
-   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+   var randomImg = function () {
+      // $('header .fullheight').css("backgroundImage").fadeOut();
+      randomNumber = Math.ceil(Math.random()*bgImageTotal);
+      $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)').hide().fadeIn(1000);	
+      // setTimeout(randomImg, 10000);
+   }
+   randomImg();
+   
 
 
    // Animated Scrolling
@@ -87,12 +115,12 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       var windowpos = $(window).scrollTop(),
          nav = $('header nav');
       nav.removeClass('navShadow');
-      $('h3#contact').removeClass('show');
+      $('h3#contact').removeClass('slideIn');
       // nav.css('position', 'static');
 
       if (windowpos >= nav.offset().top) {
          nav.addClass('navShadow');
-         $('h3#contact').addClass('show');
+         $('h3#contact').addClass('slideIn');
          // nav.css('position', 'fixed');
          // nav.css('top', '0');
          // nav.css('left', '0');
@@ -208,20 +236,23 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
 
       // placeholder();
 
+   var ghost = $('#ghost');
 
 	var Contact = {
 	
 		init: function() {
+
+         // var ghost = $('<section id="ghost" class="fullheight"></section>');
 	
 			var contactWrap = $('<div id="contact-wrap"></div>')
-												.appendTo('main')
+												.appendTo('#ghost')
 												.load( 'contact.html form#contact' )
 												.hide();
 
-			$('a#contact-link').on('click', function( e ) {		
-					
+			$('a#contact-link').on('click', function(e) {		
+               ghost.css('z-index', '90');
 					Contact.close.call(contactWrap);					
-					contactWrap.slideDown(700);	
+					contactWrap.fadeIn(1500);	
 					placeholder();
 					response();
 
@@ -239,7 +270,8 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
 			$('<span class="close">X</span>')
 				.prependTo(this)
 				.on('click', function() {					
-					$this.slideUp(700);
+					$this.fadeOut(1000);
+               ghost.css('z-index', '-1');
 			});
 		
 		}
