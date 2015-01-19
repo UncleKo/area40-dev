@@ -13,8 +13,11 @@
          }
          @include breakpoint($medium) {
             @include span(3);
-            height: 15em;
+            height: 12em;
          }
+         font-size: 20px;
+         color: $white;
+         @include centering;
       } //.square
    } //div general
 

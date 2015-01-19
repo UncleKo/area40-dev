@@ -20,22 +20,61 @@
 
    //Square Grid
    var sheight = function() {
-      var swidth = $('.square').css('width');
+      $('.square').each(function(index, element){
+         var swidth = $(element).css('width'),
+            cssHeight = $(element).css('height');
+         // if($(window).width() > 650 && $(window).width() < 960) { 
+            $(element).css('height', swidth);
+         // } else {
+         //    $(element).css('height', '');
+         // }
 
-      $('.square').css('height', swidth);
+      });
+
    }
-
-   // var winwidth = $(window).width();
    
-   if($(window).width() > 650) { 
-      sheight();
-   }
+   sheight();
 
    $(window).resize(function() {
-      if($(window).width() > 650) { 
          sheight();
-      }
    }); //on resize
+
+
+
+
+   //Rectangle Grid
+   var recHeight = function() {
+      $('.rectangle').each(function(index, element){
+         var recWidth = parseInt( $(element).css('width'));
+
+         if($(window).width() > 650 && $(window).width() < 960) { 
+            $(element).css('height', recWidth/2);
+         } else {
+            $(element).css('height', '');
+         }
+
+      });
+
+   }
+   
+   recHeight();
+
+   $(window).resize(function() {
+         recHeight();
+   }); //on resize
+
+
+
+
+
+   // var intro = function() {
+   //    var introHeaderWidth = $('#intro header').css('width');
+   //    if($(window).width() > 650 && $(window).width() < 960) { 
+   //       $('#intro div:nth-child(2) > ul > li:first-child')
+   //          .css('height', introHeaderWidth/2);
+   //    }
+   // }
+   // intro();
 
 
 

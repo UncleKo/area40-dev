@@ -50,14 +50,15 @@ header {
                top: rhythm(16);
                margin-bottom: 0;
                span {
-               transition: color 1s ease-out;
-                  color: $kihada;
+               transition: color .5s ease-out;
+                  color: $kurenai;
                   font-size: 55px;
                   // @include adjust-font-size-to(55px);
                   // @include single-text-shadow($kuchiba, 1px, -1px);
                   &:hover {
-                     color: darken($kihada, 10);
-                     @include text-shadow(#aaa 1px -1px, darken($kihada, 10) 0 0 5px);
+                     // color: darken($kihada, 10);
+                     color: $syojyohi;
+                     @include text-shadow(darken($syojyohi, 20) 0 0 1px);
                   }
                } //span
             } //p

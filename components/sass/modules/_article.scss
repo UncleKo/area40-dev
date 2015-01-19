@@ -1,4 +1,4 @@
-#as_housing, #vs_print {
+#shrewd, #as_housing, #vs_print {
 
    div {
       article {
@@ -12,15 +12,24 @@
             )
          );
          color: $white;
+         @include breakpoint(750px) {
+            @include pre(2);
+         }
+         @include breakpoint($medium) {
+            @include pre(3);
+         }
+         p {
+            padding-right: 1.5em;
+            @include breakpoint($small) {
+                  @include span(1 of 2);
+                  &.expand {
+                     @include span(1 of 1);
+                     margin-top: 1em;
+                  }
+            } //breakpoint
+         }
       } //article
 
-      @include breakpoint($small) {
-         @include pad(2 0);
-      }
-      @include breakpoint($medium) {
-         p {
-            @include span(4 of 8);
-         }
-      } //breakpoint
    } //div 
 } 
+

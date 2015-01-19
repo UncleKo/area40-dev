@@ -1,2 +1,80 @@
 #intro {
-}
+   header {
+      color: white;
+      @include clearfix;
+      &>div:first-child {
+         background: $wasurenagusa;
+         padding: rhythm(20) rhythm(2);
+         @include centering;
+         @include breakpoint($small max-width) {
+            margin-bottom: .5em;
+         }
+         @include breakpoint($small) {
+            @include span(6);
+            border-right: 4px solid #fff;
+         } //small
+         @include breakpoint($medium) {
+            // padding-top: 8em;
+            // padding-left: 4em;
+            height: 30em;
+         } //medium
+      } //div:first-child 
+      &>div:nth-child(2) {
+         @include clearfix;
+         @include breakpoint($small) {
+            @include span(6);
+         }
+         @include breakpoint($medium) {
+            height: 30em;
+         }
+         &>ul {
+            &>li {
+               padding: rhythm(2);
+               @include breakpoint($small max-width) {
+                  padding: rhythm(4) rhythm(2);
+                  margin-bottom: .5em;
+               }
+            } //li
+            &>li:first-child {
+               // margin-bottom: .5em;
+               background: $tsuyukusa;
+               transition: background .5s ease-out;
+               &:hover {
+                  background: $momo;
+               }
+               @include breakpoint($medium) {
+                  padding-left: rhythm(4);
+                  height: 15em;
+               }
+               @include breakpoint(840px) {
+                  padding-top: rhythm(6);
+               }
+               @include breakpoint($small) {
+                  border-bottom: 4px solid #fff;
+                  border-left: 4px solid #fff;
+               }
+            } //li:first-child
+            &>li:nth-child(2) {
+               background: $gunjyo;
+               @include breakpoint($medium) {
+                  padding-top: rhythm(3);
+                  padding-left: rhythm(4);
+                  height: 15em;
+               }
+               @include breakpoint($small 900px) {
+                  h3 {
+                     @include trailer(1, 30px);
+                  }
+                  p {
+                     margin-bottom: 0;
+                  }
+               }
+               @include breakpoint($small) {
+                  border-top: 4px solid #fff;
+                  border-left: 4px solid #fff;
+               }
+            } //li:nth-child(2)
+         } //div>ul
+      } //div:nth-child(2)
+   } //header
+} //#intro

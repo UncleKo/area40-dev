@@ -16,9 +16,10 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+// env = 'development';
+env = 'production';
 
-if (env==='production') {
+if (env==='development') {
   outputDir = 'builds/development/';
   sassStyle = 'expanded';
 } else {

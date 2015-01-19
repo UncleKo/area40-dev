@@ -1,3 +1,4 @@
+
 .scene {
    position: relative;
    padding: rhythm(4) 0; 
@@ -7,7 +8,7 @@
    @include trailer(4);
    @include clearfix;
    .container {
-      @include container(100%);
+      @include container(95%);
       @include clearfix;
    }
    @include breakpoint($medium) {

@@ -20,7 +20,8 @@ header nav {
             top: 0;
             bottom: 0;
          }
-         font-family: $fontHelvetica;
+         font-family: $raleway;
+         font-weight: 400;
          // @include button($kihada);
          background: $kihada;
          @include background-image(
@@ -30,19 +31,23 @@ header nav {
          );
          @include gradientTransition;
          @include box-shadow(
-            lighten($kihada, 10) 0 1px 10px
+            darken($kihada, 20) 0 1px 10px
          );
+         &:hover {
+            @include box-shadow(
+               lighten($kihada, 20) 0 1px 10px
+            );
+         }
          
          a {
             color:darken($kihada, 30);
-            font-weight: bold;
             text-decoration: none;
             display: block;
             padding: 10px;
             text-align: center;
             position: relative;
             z-index: 3;
-            // @include single-text-shadow(darken($kihada, 20), -1px, -1px);
+            @include single-text-shadow(lighten($kihada, 20), -1px, -1px);
          } // a
 
          @include breakpoint(max-width $medium) {
@@ -76,7 +81,7 @@ header nav {
                color: $white;
                font-family: $sourceSans;
                font-size: 20px;
-               font-weight: 400;
+               font-weight: 300;
                text-decoration: none;
                display: inline-block;
                height: 45px;
@@ -87,9 +92,12 @@ header nav {
                }
                position: relative;
                z-index: 3;
+               // border-left: 1px solid lighten($omeshicha, 20);
+               // border-right: 1px solid darken($omeshicha, 20);
 
                &:hover {
                   color:darken($kihada, 30);
+                  @include single-text-shadow(lighten($kihada, 10), -1px, -1px);
                   @include box-shadow(
                      lighten($kihada, 10) 0 2px 10px
                   );
@@ -105,8 +113,9 @@ header nav {
                      )
                   );
                   @include box-shadow(
-                     lighten($kihada, 10) 0 1px 10px
+                     darken($kihada, 20) 0 1px 10px
                   );
+                  // @include text-shadow(darken($kihada, 20) -1px -1px);
                } //active
 
                i {
@@ -141,11 +150,11 @@ header nav {
       @include box-shadow(
          darken($omeshicha, 10) 0 2px 10px
       );
-      h3:hover {
-         @include box-shadow(
-            darken($kihada, 10) 0 2px 10px
-         );
-      }
+      // h3:hover {
+      //    @include box-shadow(
+      //       darken($kihada, 10) 0 2px 10px
+      //    );
+      // }
    } //navShadow
 
 }  //nav

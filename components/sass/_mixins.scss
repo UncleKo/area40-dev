@@ -25,16 +25,6 @@
 } //centering
 
 
-@mixin button($direction1: bottom, $color1: $kuchiba, $direction2: top, $color2: $yamabuki, $duration: 0.5s, $ease: ease-out) {
-   background: $color1;
-   @include background-image(
-      linear-gradient(
-         $direction1, lighten($color1, 20), $color1
-      )
-   );
-   @include gradientTransition($direction2, $color2, $duration, $ease);
-} //button
-
 
 
 // Gradient Transition Hack!!
@@ -70,6 +60,19 @@
          opacity: 1;
       } //a:hover:after
 } //transitionHack
+
+
+
+@mixin button($direction1: bottom, $color1: $kuchiba, $direction2: top, $color2: $yamabuki, $duration: 0.5s, $ease: ease-out) {
+   background: $color1;
+   @include background-image(
+      linear-gradient(
+         $direction1, lighten($color1, 20), $color1
+      )
+   );
+   @include gradientTransition($direction2, $color2, $duration, $ease);
+} //button
+
 
 
 
