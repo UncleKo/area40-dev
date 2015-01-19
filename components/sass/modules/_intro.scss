@@ -2,14 +2,21 @@
    header {
       color: white;
       @include clearfix;
+      margin-bottom: .5em;
+      overflow: hidden;
       &>div:first-child {
-         background: $wasurenagusa;
-         padding: rhythm(20) rhythm(2);
+         @include clearfix;
          @include centering;
+         background: $wasurenagusa;
+         h1, h2 {
+            @include text-shadow( darken($wasurenagusa, 20) -1px -1px);
+         }
+         padding: rhythm(10) rhythm(2);
          @include breakpoint($small max-width) {
             margin-bottom: .5em;
          }
          @include breakpoint($small) {
+            padding: rhythm(20) rhythm(2);
             @include span(6);
             border-right: 4px solid #fff;
          } //small
@@ -20,6 +27,8 @@
          } //medium
       } //div:first-child 
       &>div:nth-child(2) {
+         width: 100%;
+         overflow: hidden;
          @include clearfix;
          @include breakpoint($small) {
             @include span(6);
@@ -38,6 +47,9 @@
             &>li:first-child {
                // margin-bottom: .5em;
                background: $tsuyukusa;
+               h3 {
+                  @include text-shadow( darken($tsuyukusa, 10) -1px -1px);
+               }
                transition: background .5s ease-out;
                &:hover {
                   background: $momo;
@@ -61,7 +73,7 @@
                   padding-left: rhythm(4);
                   height: 15em;
                }
-               @include breakpoint($small 900px) {
+               @include breakpoint(small 900px) {
                   h3 {
                      @include trailer(1, 30px);
                   }
@@ -77,4 +89,92 @@
          } //div>ul
       } //div:nth-child(2)
    } //header
+   #graphic {
+      @include clearfix;
+      margin-bottom: .5em;
+      color: white;
+      h2, h3, ul {
+         width: 100%;
+         margin-bottom: 8px;
+         @include breakpoint($small) {
+            @include span(4);
+            height: 320px;
+            margin-bottom: 0;
+         }
+      } //h2, h3, ul
+      h2 {
+         background: $nanohana;
+         color: darken($tamamorokoshi, 20);
+         @include text-shadow( lighten($nanohana, 20) -1px -1px);
+         margin-top: 0;
+         @include centering;
+         padding: 1.0em;
+         @include breakpoint($small) {
+            border-left: 4px solid #fff;
+            border-right: 4px solid #fff;
+         } //h2
+      }
+      h3 {
+         background: $tamamorokoshi;
+         text-align: right;
+         padding: rhythm(12, 30px) rhythm(2, 30px);
+         @include text-shadow( darken($tamamorokoshi, 10) -1px -1px);
+         // padding: .5em;
+         // @include centering;
+         @include breakpoint($small) {
+            padding: rhythm(6, 30px) rhythm(1, 30px);
+            border-right: 4px solid #fff;
+         }
+         @include breakpoint(800px) {
+            padding: rhythm(10, 30px) rhythm(1, 30px);
+         }
+         @include breakpoint($medium) {
+            padding: rhythm(15, 30px) rhythm(1, 30px);
+         }
+      } //h3
+      ul {
+         background: $kihada;
+         color: darken($tamamorokoshi, 20);
+         padding: 2em 1.0em 1em;
+         @include breakpoint($small) {
+            border-left: 4px solid #fff;
+         }
+         @include breakpoint($small $medium) {
+            p {
+               margin-bottom: 0;
+            }
+         }
+         @include breakpoint($medium) {
+            padding-top: 5.0em;
+         }
+      } //ul
+   } //#graphic
+   #webdesign {
+      div, ul {
+         width: 100%;
+         color: white;
+         margin-bottom: 8px;
+         @include breakpoint($small) {
+            @include span(6);
+            height: 320px;
+            margin-bottom: 0;
+         }
+      } //h2, h3, ul
+      &>div {
+         background: $wakatake;
+         padding: 6.0em 1.0em;
+         @include breakpoint($small) {
+            border-left: 4px solid #fff;
+            float: right;
+         }
+      } // div
+      ul {
+         background: $nae;
+         text-align: right;
+         padding: 1.5em .5em 1em;
+         @include breakpoint($small) {
+            border-right: 4px solid #fff;
+         }
+      } //ul
+   } //webdesign
 } //#intro

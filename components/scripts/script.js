@@ -23,11 +23,19 @@
       $('.square').each(function(index, element){
          var swidth = $(element).css('width'),
             cssHeight = $(element).css('height');
-         // if($(window).width() > 650 && $(window).width() < 960) { 
-            $(element).css('height', swidth);
-         // } else {
-         //    $(element).css('height', '');
-         // }
+
+         $(element).css('height', swidth);
+
+         if($(element).hasClass('midonly') && $(window).width() < 650 ) {
+            $(element).css('height', '');
+         };
+
+
+         //    if($(window).width() > 650 && $(window).width() < 960) { 
+         //       $(element).css('height', swidth);
+         //    } else {
+         //       $(element).css('height', '');
+         //    }
 
       });
 
