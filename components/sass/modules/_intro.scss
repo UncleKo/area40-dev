@@ -47,9 +47,9 @@
             &>li:first-child {
                // margin-bottom: .5em;
                background: $tsuyukusa;
-               h3 {
-                  @include text-shadow( darken($tsuyukusa, 10) -1px -1px);
-               }
+               // h3 {
+               //    @include text-shadow( darken($tsuyukusa, 10) -1px -1px);
+               // }
                transition: background .5s ease-out;
                &:hover {
                   background: $momo;
@@ -106,6 +106,11 @@
          background: $nanohana;
          color: darken($tamamorokoshi, 20);
          @include text-shadow( lighten($nanohana, 20) -1px -1px);
+         @include box-shadow( 
+            lighten($nanohana, 30) 0 0 0 10px inset,
+            lighten($nanohana, 20) 0 0 0 20px inset,
+            lighten($nanohana, 10) 0 0 0 30px inset
+         );
          margin-top: 0;
          @include centering;
          padding: 1.0em;
@@ -178,3 +183,26 @@
       } //ul
    } //webdesign
 } //#intro
+
+#motto {
+   background: $syojyohi;
+   @include background-image(
+      linear-gradient(
+         left, $kurenai, $syojyohi
+      )
+   );
+   color: white;
+   text-align: center;
+   padding: rhythm(6) 0;
+   margin: rhythm(12) 0;
+   h1 {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-style: italic;
+      @include adjust-font-size-to(40px);
+   }
+   h2 {
+      font-family: $notoSans;
+      font-weight: 100;
+      @include adjust-font-size-to(25px);
+   }
+}
