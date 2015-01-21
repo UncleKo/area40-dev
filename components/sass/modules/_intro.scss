@@ -7,9 +7,10 @@
       &>div:first-child {
          @include clearfix;
          @include centering;
-         background: $wasurenagusa;
+         background: $ake;
+         @include gradientBorders($ake);
          h1, h2 {
-            @include text-shadow( darken($wasurenagusa, 20) -1px -1px);
+            @include text-shadow( darken($ake, 10) -1px -1px);
          }
          padding: rhythm(10) rhythm(2);
          @include breakpoint($small max-width) {
@@ -46,14 +47,12 @@
             } //li
             &>li:first-child {
                // margin-bottom: .5em;
-               background: $tsuyukusa;
-               // h3 {
-               //    @include text-shadow( darken($tsuyukusa, 10) -1px -1px);
-               // }
+               background: $nakabeni;
+               // background: $asagi;
                transition: background .5s ease-out;
-               &:hover {
-                  background: $momo;
-               }
+               // &:hover {
+               //    background: $nakabeni;
+               // }
                @include breakpoint($medium) {
                   padding-left: rhythm(4);
                   height: 15em;
@@ -67,13 +66,13 @@
                }
             } //li:first-child
             &>li:nth-child(2) {
-               background: $gunjyo;
+               background: $omeshicha;
                @include breakpoint($medium) {
                   padding-top: rhythm(3);
                   padding-left: rhythm(4);
                   height: 15em;
                }
-               @include breakpoint(small 900px) {
+               @include breakpoint($small 900px) {
                   h3 {
                      @include trailer(1, 30px);
                   }
@@ -105,12 +104,8 @@
       h2 {
          background: $nanohana;
          color: darken($tamamorokoshi, 20);
+         @include gradientBorders($nanohana);
          @include text-shadow( lighten($nanohana, 20) -1px -1px);
-         @include box-shadow( 
-            lighten($nanohana, 30) 0 0 0 10px inset,
-            lighten($nanohana, 20) 0 0 0 20px inset,
-            lighten($nanohana, 10) 0 0 0 30px inset
-         );
          margin-top: 0;
          @include centering;
          padding: 1.0em;
@@ -150,7 +145,7 @@
             }
          }
          @include breakpoint($medium) {
-            padding-top: 5.0em;
+            padding-top: 4.0em;
          }
       } //ul
    } //#graphic
@@ -164,20 +159,25 @@
             height: 320px;
             margin-bottom: 0;
          }
-      } //h2, h3, ul
+      } //div, ul
       &>div {
          background: $wakatake;
+         @include text-shadow( darken($wakatake, 10) -1px -1px);
          padding: 6.0em 1.0em;
          @include breakpoint($small) {
             border-left: 4px solid #fff;
             float: right;
          }
+         @include breakpoint($small 720px) {
+            padding-top: 5.0em;
+         }
       } // div
       ul {
          background: $nae;
          text-align: right;
-         padding: 1.5em .5em 1em;
+         padding: 2em .5em 1em;
          @include breakpoint($small) {
+            padding-top: 3.0em;
             border-right: 4px solid #fff;
          }
       } //ul
@@ -185,24 +185,53 @@
 } //#intro
 
 #motto {
-   background: $syojyohi;
-   @include background-image(
-      linear-gradient(
-         left, $kurenai, $syojyohi
-      )
-   );
+   @include clearfix;
    color: white;
-   text-align: center;
-   padding: rhythm(6) 0;
-   margin: rhythm(12) 0;
+   margin: rhythm(8) 0;
+   @include breakpoint($small) {
+      padding: rhythm(6) 0;
+      margin: rhythm(9) 0 rhythm(15);
+   }
    h1 {
       font-family: "Times New Roman", Times, Georgia, serif;
       font-style: italic;
-      @include adjust-font-size-to(40px);
-   }
+      @include adjust-font-size-to(30px);
+      span {
+         padding: 0 10px;
+         background: $syojyohi;
+         @include background-image(
+            linear-gradient(
+               right, $kurenai, $syojyohi
+            )
+         );
+      } //span
+      @include breakpoint($small) {
+         @include adjust-font-size-to(40px);
+         span {
+            padding: 0 20px;
+         } //span
+      } //breakpoint
+   } //h1
    h2 {
       font-family: $notoSans;
       font-weight: 100;
-      @include adjust-font-size-to(25px);
-   }
-}
+      @include adjust-font-size-to(15px);
+      text-align: right;
+      span {
+         padding: 0 5px;
+         background: $syojyohi;
+         @include background-image(
+            linear-gradient(
+               left, $kurenai, $syojyohi
+            )
+         );
+      } //span
+      @include breakpoint($small) {
+         @include adjust-font-size-to(25px);
+         margin-top: 2px;
+         span {
+            padding: 0 10px;
+         }
+      } //breakpoint
+   } //h2
+} //#motto

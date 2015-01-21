@@ -25,6 +25,13 @@
 } //centering
 
 
+@mixin gradientBorders($color) {
+   @include box-shadow( 
+      lighten($color, 30) 0 0 0 10px inset,
+      lighten($color, 20) 0 0 0 20px inset,
+      lighten($color, 10) 0 0 0 30px inset
+   );
+}
 
 
 // Gradient Transition Hack!!

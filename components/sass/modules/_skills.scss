@@ -17,15 +17,20 @@
          padding: 20px;
       }
       @include breakpoint($small) {
-         @include span(4);
+         @include span(6);
          padding: 30px;
          border: 10px solid $white;
+      }
+      @include breakpoint(800px $medium) {
+         @include span(4);
+         padding: 30px 10px;
          // @include box-shadow( 
          //    $white 0 0 0 10px inset,
          //    $uguisucha 0 0 0 20px inset
          // );
       } //breadpoint
       @include breakpoint($medium) {
+         @include span(4);
          height: 20em;
       }
    } //header
@@ -36,6 +41,12 @@
    h4 {
       font-family: $notoSans;
       font-weight: 100;
+      background: lighten($nanohana, 10);
+      @include background-image(
+         linear-gradient(
+            left, lighten($nanohana, 10), lighten($nanohana, 20)
+         )
+      );
       @include adjust-font-size-to(20px);
       @include trailer(1, 20px);
    }
@@ -46,17 +57,27 @@
          width: 100%;
          @include breakpoint($small max-width) {
             border: 10px solid $uguisucha;
-            border-right: 0;
+            &:nth-child(2n+1) {
+               border-right: 0;
+            // border-right: 10px solid $white;
+            }
+            &:nth-child(2n) {
+               border-left: 0;
+               // border-left: 10px solid $white;
+            }
             padding: 20px;
             margin-bottom: .5em;
          }
          @include breakpoint($small) {
-            @include span(4);
+            @include span(6);
             @include box-shadow( 
                $white 0 0 0 10px inset,
                $uguisucha 0 0 0 20px inset
             );
             padding: 30px;
+         }
+         @include breakpoint(800px) {
+            @include span(4);
          }
          @include breakpoint($medium) {
             height: 20em;
