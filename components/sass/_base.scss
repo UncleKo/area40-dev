@@ -15,14 +15,20 @@ body {
    h1 {
       font-family: $sourceSans;
       font-weight: 200;
-      @include adjust-font-size-to(60px);
+      @include adjust-font-size-to(50px);
+      @include breakpoint(850px 910px) {
+         @include adjust-font-size-to(55px);
+      }
+      @include breakpoint(910px) {
+         @include adjust-font-size-to(60px);
+      }
       // @include leader(5, 60px);
       // @include trailer(4, 60px);
       span {
          padding-right: 13px;
          // color: lighten($black, 30);
-      }
-   }
+      } //span
+   } //h1
    article h1 {
       font-family: $notoSans;
       font-weight: 100;
@@ -36,10 +42,13 @@ body {
    h2 {
       font-family: $notoSans;
       font-weight: 100;
-      @include adjust-font-size-to(40px);
-      @include leader(2, 40px);
+      @include adjust-font-size-to(35px);
+      @include leader(2, 35px);
       // @include trailer(4, 40px);
-   }
+      @include breakpoint(910px) {
+         @include adjust-font-size-to(40px);
+      }
+   } //h2
    // &#intro h2:not(:nth-child(2)) {
    //    font-family: $notoSans;
    //    font-weight: 100;
@@ -56,6 +65,9 @@ body {
       font-family: $notoSans;
       font-weight: 100;
       @include adjust-font-size-to(30px);
+      // @include breakpoint($small 900px) {
+      //    @include adjust-font-size-to(25px);
+      // }
       // @include leader(5, 30px);
       @include trailer(2, 30px);
       line-height: 40px; //To fix the auto line-height

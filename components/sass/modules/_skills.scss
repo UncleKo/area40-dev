@@ -9,16 +9,19 @@
       );
       color: $white;
       width: 100%;
+      padding: 30px;
       h1,h2 {
          @include text-shadow( darken($uguisucha, 20) -1px -1px);
       }
+      @include breakpoint(450px $small) {
+         padding: 50px;
+         @include centering;
+      }
       @include breakpoint($small max-width) {
          margin-bottom: 1em;
-         padding: 20px;
       }
       @include breakpoint($small) {
          @include span(6);
-         padding: 30px;
          border: 10px solid $white;
       }
       @include breakpoint(800px $medium) {

@@ -24,12 +24,15 @@
          var swidth = $(element).css('width'),
             cssHeight = $(element).css('height');
 
-         $(element).css('height', swidth);
-
-         if($(element).hasClass('midonly') && $(window).width() < 650 ) {
+         if($(window).width() < 450 || $(window).width() > 732) { 
+            $(element).css('height', swidth);
+         } else {
             $(element).css('height', '');
          };
 
+         if($(element).hasClass('midonly') && $(window).width() < 730 ) {
+            $(element).css('height', '');
+         };
 
          //    if($(window).width() > 650 && $(window).width() < 960) { 
          //       $(element).css('height', swidth);
@@ -55,7 +58,7 @@
       $('.rectangle').each(function(index, element){
          var recWidth = parseInt( $(element).css('width'));
 
-         if($(window).width() > 650 && $(window).width() < 960) { 
+         if($(window).width() > 732) { 
             $(element).css('height', recWidth/2);
          } else {
             $(element).css('height', '');

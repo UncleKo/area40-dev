@@ -7,21 +7,31 @@
       &>div:first-child {
          @include clearfix;
          @include centering;
-         background: $ake;
-         @include gradientBorders($ake);
+         background: $omeshicha;
+         @include gradientBorders($omeshicha);
          h1, h2 {
-            @include text-shadow( darken($ake, 10) -1px -1px);
+            @include text-shadow( darken($omeshicha, 10) -1px -1px);
          }
-         padding: rhythm(10) rhythm(2);
+         transition: all .5s ease-out;
+         // transition: box-shadow .5s ease-out;
+         &:hover {
+            background: $ake;
+            @include gradientBorders($ake);
+            h1, h2 {
+               @include text-shadow( darken($ake, 10) -1px -1px);
+            }
+         } //div:hover
+         padding: rhythm(10) rhythm(4);
          @include breakpoint($small max-width) {
             margin-bottom: .5em;
-         }
+         } //breakpoint
          @include breakpoint($small) {
-            padding: rhythm(20) rhythm(2);
+            // padding: rhythm(20) rhythm(4);
             @include span(6);
             border-right: 4px solid #fff;
          } //small
          @include breakpoint($medium) {
+            padding: rhythm(20) rhythm(4);
             // padding-top: 8em;
             // padding-left: 4em;
             height: 30em;
@@ -47,9 +57,9 @@
             } //li
             &>li:first-child {
                // margin-bottom: .5em;
-               background: $nakabeni;
+               background: $tamamorokoshi;
                // background: $asagi;
-               transition: background .5s ease-out;
+               // transition: background .5s ease-out;
                // &:hover {
                //    background: $nakabeni;
                // }
@@ -66,7 +76,7 @@
                }
             } //li:first-child
             &>li:nth-child(2) {
-               background: $omeshicha;
+               background: lighten($omeshicha, 10);
                @include breakpoint($medium) {
                   padding-top: rhythm(3);
                   padding-left: rhythm(4);
@@ -113,12 +123,13 @@
             border-left: 4px solid #fff;
             border-right: 4px solid #fff;
          } //h2
+         padding: rhythm(12, 40px) rhythm(4, 40px);
       }
       h3 {
-         background: $tamamorokoshi;
+         background: $ake;
          text-align: right;
          padding: rhythm(12, 30px) rhythm(2, 30px);
-         @include text-shadow( darken($tamamorokoshi, 10) -1px -1px);
+         @include text-shadow( darken($ake, 10) -1px -1px);
          // padding: .5em;
          // @include centering;
          @include breakpoint($small) {
@@ -133,8 +144,7 @@
          }
       } //h3
       ul {
-         background: $kihada;
-         color: darken($tamamorokoshi, 20);
+         background: $omeshicha;
          padding: 2em 1.0em 1em;
          @include breakpoint($small) {
             border-left: 4px solid #fff;
@@ -228,7 +238,8 @@
       } //span
       @include breakpoint($small) {
          @include adjust-font-size-to(25px);
-         margin-top: 2px;
+         margin-top: 2px; //!!!Need to offset in someway for baseline grid. w
+         
          span {
             padding: 0 10px;
          }
