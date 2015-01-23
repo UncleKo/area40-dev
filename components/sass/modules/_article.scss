@@ -1,22 +1,36 @@
 #shrewd, #as_housing, #vs_print {
 
    div {
+      // @include bgCover;
+      @include centering;
       article {
          @include clearfix;
          @include border-radius(10px);
          padding: rhythm(2) 30px;
-         background: $yamabuki;
+         color: $white;
+         background: darken($kihada, 10);
          @include background-image(
             linear-gradient(
-               right, $kuchiba, $yamabuki
+               left, darken($kihada, 20),  darken($kihada, 10)
             )
          );
-         color: $white;
+         // background: $yamabuki;
+         // @include background-image(
+         //    linear-gradient(
+         //       right, $kuchiba, $yamabuki
+         //    )
+         // );
          @include breakpoint(750px) {
             @include pre(2);
          }
          @include breakpoint($medium) {
             @include pre(3);
+         }
+         h1 {
+            color: darken($kihada, 30);
+            @include single-text-shadow(lighten($kihada, 20), -1px, -1px);
+            // dislplay: inline-block;
+            // background: $white;
          }
          p {
             padding-right: 1.5em;
@@ -31,5 +45,27 @@
       } //article
 
    } //div 
-} 
+} //#shrewd, #as_housing, #vs_print
+
+
+#shrewd {
+   background: $aku;
+   @include background-image(
+      linear-gradient(
+         left, lighten($black, 30),  lighten($kihada, 10)
+      )
+   );
+   h1 {
+      font-family: $raleway;
+      font-weight: 200;
+   }
+} //#shrewd
+
+#as_housing {
+   background: $ake;
+} //as_housing
+
+#vs_print {
+   background: $omeshicha;
+} //#vs_print
 

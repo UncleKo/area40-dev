@@ -131,16 +131,25 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    // window.onload=changeImg;
 
    // Random Background 2nd
-   bgImageTotal=18;
+   bgImageTotal=22;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
-   // Not to pick up 0
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
+   // Not to pick up 0
    randomNumber = Math.ceil(Math.random()*bgImageTotal);
 
 if(!isTouch) {
-   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)') 
+} else {	
+   $('header .fullheight').css("backgroundImage", 'url(/images/background/small/'+randomNumber+'.jpg)') 
 }
+
+
+// $('section .fullheight').each(function(index, element){
+//    randomNumber = Math.ceil(Math.random()*bgImageTotal);
+//    $(element).css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+// })
+
    
 
 

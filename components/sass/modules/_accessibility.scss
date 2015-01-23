@@ -1,0 +1,14 @@
+#accessibility {
+   main {
+      margin-top: rhythm(6);
+   }
+   .fullheight {
+      @include span(4);
+      background: url('/images/accessibility.jpg');
+      @include bgCover;
+   } //fullheight
+   .first-block, .second-block {
+      @include span(4);
+      @include gutters(3em inside);
+   }
+} //accessibility
