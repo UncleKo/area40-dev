@@ -194,57 +194,5 @@
    } //webdesign
 } //#intro
 
-#motto {
-   @include clearfix;
-   color: white;
-   margin: rhythm(8) 0;
-   @include breakpoint($small) {
-      padding: rhythm(6) 0;
-      margin: rhythm(9) 0 rhythm(15);
-   }
-   h1 {
-      font-family: "Times New Roman", Times, Georgia, serif;
-      font-style: italic;
-      @include adjust-font-size-to(30px);
-      span {
-         padding: 0 10px;
-         background: $syojyohi;
-         @include background-image(
-            linear-gradient(
-               right, $kurenai, $syojyohi
-            )
-         );
-      } //span
-      @include breakpoint($small) {
-         @include adjust-font-size-to(40px);
-         span {
-            padding: 0 20px;
-         } //span
-      } //breakpoint
-   } //h1
-   h2 {
-      font-family: $notoSans;
-      font-weight: 100;
-      @include adjust-font-size-to(15px);
-      text-align: right;
-      span {
-         padding: 0 5px;
-         background: $syojyohi;
-         @include background-image(
-            linear-gradient(
-               left, $kurenai, $syojyohi
-            )
-         );
-      } //span
-      @include breakpoint($small) {
-         @include adjust-font-size-to(25px);
-         margin-top: 2px; //!!!Need to offset in someway for baseline grid. w
-         
-         span {
-            padding: 0 10px;
-         }
-      } //breakpoint
-   } //h2
-} //#motto
 
 

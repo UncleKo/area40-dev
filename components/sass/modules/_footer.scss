@@ -5,7 +5,10 @@ footer {
    bottom: 0;
    #contact {
       position: absolute;
-      bottom: 300px;
+      bottom: 150px;
+      @include breakpoint($small) {
+         bottom: 300px;
+      }
       right: 2500px;
       transition: all 0.5s ease-out;
       a {
@@ -70,10 +73,10 @@ footer {
 
    ul {
       position: absolute;
-      bottom: 30px;
-      @include breakpoint($medium) {
-         bottom: 20px;
-      }
+      bottom: 20px;
+      // @include breakpoint($medium) {
+      //    bottom: 20px;
+      // }
       right: 0;
       // background: $black;
       // @include background-image(

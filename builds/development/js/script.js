@@ -28,6 +28,14 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       var wheight = $(window).height(); //get height of the window
 
       $('.fullheight').css('height', wheight);
+      // $('.fullheight').each(function(index, element){
+      //    // console.log($(element));
+      //    // console.log(this);
+      //    $(element).css('height', wheight);
+      //    if($(element).hasClass('midonly') && $(window).width() < 730 ) {
+      //       $(element).css('height', '');
+      //    }
+      // });
    }
 
    fullheight();

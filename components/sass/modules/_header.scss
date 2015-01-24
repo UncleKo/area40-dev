@@ -7,7 +7,7 @@ header {
             right, lighten($usuao, 20), $usuao
          )
       );
-      @include bgCover;
+      @include bgCover(center bottom);
       // background-repeat: no-repeat;
       // background-position: center center;
       // background-attachment: fixed;

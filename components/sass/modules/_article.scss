@@ -1,8 +1,15 @@
-#shrewd, #as_housing, #vs_print {
+#shrewd, #technique, #as_housing, #vs_print {
 
    div {
+      padding: rhythm(8) 0;
+      @include breakpoint($small) {
+         padding: rhythm(12) 0;
+      }
+      @include breakpoint($medium) {
+         padding: rhythm(16) 0;
+      }
       // @include bgCover;
-      @include centering;
+      // @include centering;
       article {
          @include clearfix;
          @include border-radius(10px);
@@ -48,18 +55,29 @@
 } //#shrewd, #as_housing, #vs_print
 
 
-#shrewd {
+#shrewd, #technique {
    background: $aku;
    @include background-image(
       linear-gradient(
          left, lighten($black, 30),  lighten($kihada, 10)
       )
    );
+   div {
+      padding: rhythm(12) 0;
+      @include breakpoint($small) {
+         padding: rhythm(20) 0;
+      }
+      @include breakpoint($medium) {
+         padding: rhythm(26) 0;
+      }
+   }
    h1 {
       font-family: $raleway;
       font-weight: 200;
    }
 } //#shrewd
+
+
 
 #as_housing {
    background: $ake;
@@ -69,3 +87,56 @@
    background: $omeshicha;
 } //#vs_print
 
+
+#motto, #is_an_art {
+   @include clearfix;
+   color: white;
+   margin: rhythm(8) 0;
+   @include breakpoint($small) {
+      padding: rhythm(6) 0;
+      margin: rhythm(9) 0 rhythm(15);
+   }
+   h1 {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-style: italic;
+      @include adjust-font-size-to(30px);
+      span {
+         padding: 0 10px;
+         background: $syojyohi;
+         @include background-image(
+            linear-gradient(
+               right, $kurenai, $syojyohi
+            )
+         );
+      } //span
+      @include breakpoint($small) {
+         @include adjust-font-size-to(40px);
+         span {
+            padding: 0 20px;
+         } //span
+      } //breakpoint
+   } //h1
+   h2 {
+      font-family: $notoSans;
+      font-weight: 100;
+      @include adjust-font-size-to(15px);
+      text-align: right;
+      span {
+         padding: 0 5px;
+         background: $syojyohi;
+         @include background-image(
+            linear-gradient(
+               left, $kurenai, $syojyohi
+            )
+         );
+      } //span
+      @include breakpoint($small) {
+         @include adjust-font-size-to(25px);
+         margin-top: 2px; //!!!Need to offset in someway for baseline grid. w
+         
+         span {
+            padding: 0 10px;
+         }
+      } //breakpoint
+   } //h2
+} //#motto

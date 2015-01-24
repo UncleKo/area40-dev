@@ -108,9 +108,9 @@
 } //backImage
 
 
-@mixin bgCover {
+@mixin bgCover($bgPos:center center) {
    background-repeat: no-repeat;
-   background-position: center bottom;
+   background-position: $bgPos;
    // background-attachment: fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;

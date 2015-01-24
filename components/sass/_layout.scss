@@ -2,9 +2,6 @@
 .scene {
    position: relative;
    padding: rhythm(4) 0; 
-   &#as_housing {
-      padding-top: 0;
-   }
    @include trailer(4);
    @include clearfix;
    .container {
