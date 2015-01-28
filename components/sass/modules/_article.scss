@@ -1,4 +1,4 @@
-#shrewd, #technique, #as_housing, #vs_print {
+#shrewd, #no_design, #as_housing, #vs_print {
 
    div {
       padding: rhythm(8) 0;
@@ -55,13 +55,7 @@
 } //#shrewd, #as_housing, #vs_print
 
 
-#shrewd, #technique {
-   background: $aku;
-   @include background-image(
-      linear-gradient(
-         left, lighten($black, 30),  lighten($kihada, 10)
-      )
-   );
+#shrewd, #no_design {
    div {
       padding: rhythm(12) 0;
       @include breakpoint($small) {
@@ -75,7 +69,25 @@
       font-family: $raleway;
       font-weight: 200;
    }
+} //#shrewd, #no_design
+
+#shrewd {
+   background: $aku;
+   @include background-image(
+      linear-gradient(
+         right, lighten($black, 30),  lighten($kihada, 10)
+      )
+   );
 } //#shrewd
+
+#no_design {
+   background: $aku;
+   @include background-image(
+      linear-gradient(
+         left, lighten($black, 30),  lighten($kihada, 10)
+      )
+   );
+} //#no_design
 
 
 
@@ -97,7 +109,7 @@
       margin: rhythm(9) 0 rhythm(15);
    }
    h1 {
-      font-family: "Times New Roman", Times, Georgia, serif;
+      font-family: $times; 
       font-style: italic;
       @include adjust-font-size-to(30px);
       span {

@@ -112,10 +112,10 @@
          }
       } //h2, h3, ul
       h2 {
-         background: $nanohana;
+         background: $kihada;
          color: darken($tamamorokoshi, 20);
-         @include gradientBorders($nanohana);
-         @include text-shadow( lighten($nanohana, 20) -1px -1px);
+         @include gradientBorders($kihada);
+         @include text-shadow( lighten($kihada, 20) -1px -1px);
          margin-top: 0;
          @include centering;
          padding: 1.0em;

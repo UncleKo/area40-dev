@@ -5,7 +5,7 @@
    .fullheight {
       @include span(4);
       background: url('/images/accessibility.jpg');
-      @include bgCover(30% top);
+      @include bgCover(30% top, scroll);
    } //fullheight
    .first-block, .second-block {
       @include span(4);

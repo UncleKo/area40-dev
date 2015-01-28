@@ -27,16 +27,16 @@ footer {
          z-index: 3;
          i {
             font-size: 18px;
-            padding-right: 5px;
+            padding-right: 10px;
             // @include breakpoint ($small) {
             //    padding: 0 10px;
             // }
          }
          @include single-text-shadow(darken($kihada, 20), -1px, -1px);
       } //a
-      @include breakpoint($medium) {
-         padding-right: 20px;
-      }
+      // @include breakpoint($medium) {
+      //    padding-right: 20px;
+      // }
       // width: 109px;
       background-color: $kihada;
       @include background-image(
@@ -54,19 +54,19 @@ footer {
       }
       // @include gradientTransition;
       &.slideIn {
-         right: -75px;
-         @include breakpoint($medium) {
-            right: -10px;
-         }
+         right: -77px;
+         // @include breakpoint($medium) {
+         //    right: -10px;
+         // }
       }
       &:hover {
          @include box-shadow(
             lighten($kihada, 10) 0 1px 10px
          );
          right: -10px;
-         @include breakpoint($medium) {
-            padding-right: 40px;
-         }
+         // @include breakpoint($medium) {
+         //    padding-right: 40px;
+         // }
       } //li:hover
    } //#contact
    
