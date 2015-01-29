@@ -1,14 +1,19 @@
 #accessibility {
    main {
       margin-top: rhythm(6);
+      &>div {
+         @include breakpoint($small) {
+            @include span(4);
+         }
+      }
    }
    .fullheight {
-      @include span(4);
       background: url('/images/accessibility.jpg');
       @include bgCover(30% top, scroll);
+      margin-bottom: 50px;
+      max-width: 500px;
    } //fullheight
    .first-block, .second-block {
-      @include span(4);
       @include gutters(3em inside);
    }
 } //accessibility

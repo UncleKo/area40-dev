@@ -69,20 +69,3 @@
    }
 }//words
 
-#to_conclude {
-   background: $aku;
-   @include background-image(
-      linear-gradient(
-         left, lighten($aku, 10),  lighten($kihada, 10)
-      )
-   );
-   #chairs {
-      @include span(6);
-      background:url('/images/chairs.jpg'); 
-         // linear-gradient(
-         //    left, rgba(lighten($aku, 10), .5),  rgba(lighten($kihada, 10), .5)
-         // ), url('/images/chairs.jpg');
-      @include bgCover(center center, scroll);
-      opacity: .8;
-   } //#chairs
-}

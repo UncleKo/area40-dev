@@ -1,0 +1,76 @@
+#to_conclude {
+   overflow: hidden;
+   background: $kihada;
+   // @include background-image(
+   //    linear-gradient(
+   //       left, lighten($kihada, 20), $kihada
+   //    )
+   // );
+   #chairs {
+      @include breakpoint($small) {
+         @include span(6);
+      }
+      background:url('/images/chairs.jpg'); 
+         // linear-gradient(
+         //    left, rgba(lighten($aku, 10), .5),  rgba(lighten($kihada, 10), .5)
+         // ), url('/images/chairs.jpg');
+      @include bgCover(center center, scroll);
+      opacity: .8;
+   } //#chairs
+   article {
+      @include breakpoint($small) {
+         @include span(6);
+      }
+      @include clearfix;
+      // @include centering;
+      color: darken($tamamorokoshi, 20);
+      div {
+         @include clearfix;
+         overflow: hidden;
+         background: lighten($kihada, 20);
+         margin:50px 0 100px;
+         padding: 5px 10px;
+         @include breakpoint($small) {
+            @include border-radius(10px);
+            margin: 0 10px 10px;
+            padding: 10px 20px;
+         }
+      } //div
+      h1 {
+         font-family: $times;
+         font-weight: 400;
+         font-style: italic;
+         @include text-shadow(darken($kihada, 10) -1px -1px 0);
+         @include adjust-font-size-to(40px);
+      } //h1
+      h2 {
+         @include adjust-font-size-to(25px);
+         font-weight: 100;
+         padding: 2px 7px;
+         @include trailer(2, 25px);
+         background: darken($tamamorokoshi, 20);
+         color: $kihada;
+      } //h2
+      p {
+         background: $white;
+         padding: 0 5px;
+      }
+      ul {
+         li {
+            background: $kihada;
+            margin: 4px 0;
+            padding: 1px 2px;
+            width: 10em;
+         } //li
+         @include clearfix;
+      } //ul
+      h3 {
+         background: darken($tamamorokoshi, 20);
+         color: $kihada;
+         float: right;
+         display: inline-block;
+         margin-top: 5px;
+         padding: 0 2px;
+      } //h3
+   } //article
+}
