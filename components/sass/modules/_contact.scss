@@ -50,6 +50,11 @@
 
    p { margin-bottom:1em }
    p.label { margin:0 }
+   p#note {
+      margin-top: -20px; 
+      font-size: 11px;
+      color: darken($tamamorokoshi, 20);
+   }
 
    #response {
       border:1px solid $yamabuki;
@@ -62,7 +67,8 @@
          color:$yamabuki;
       }
       h3 {
-         font-size:1.2em;
+         font-size:1em;
+         color: darken($tamamorokoshi, 20);
       }
    } //#response
 

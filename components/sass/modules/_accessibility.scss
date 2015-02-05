@@ -1,19 +1,23 @@
 #accessibility {
    main {
       margin-top: rhythm(6);
-      &>div {
-         @include breakpoint($small) {
+      @include breakpoint($small) {
+         &>div {
             @include span(4);
+            @include clearfix;
+            @include gutters(3em inside);
+         } //>div
+         &>p {
+            @include span(8 last);
+            @include gutters(3em inside);
          }
-      }
-   }
+      } //breakpoint
+   } //main
    .fullheight {
       background: url('/images/accessibility.jpg');
       @include bgCover(30% top, scroll);
       margin-bottom: 50px;
       max-width: 500px;
    } //fullheight
-   .first-block, .second-block {
-      @include gutters(3em inside);
-   }
 } //accessibility
+

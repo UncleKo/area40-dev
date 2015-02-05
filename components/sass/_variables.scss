@@ -12,13 +12,13 @@ $susy: (
   columns: 12,
   container: 60em,
   gutters: 0,
-  gutter-position: inside,
-  debug: (
-    image: show,
-    color: blue,
-    output: overlay,
-    toggle: top right,
-  )
+  gutter-position: inside
+  // debug: (
+  //   image: show,
+  //   color: blue,
+  //   output: overlay,
+  //   toggle: top right,
+  // )
 );
 
 $mainFont: "&#12513;&#12452;&#12522;&#12458;","Meiryo","&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3","Hiragino Kaku Gothic Pro","MS P&#12468;&#12471;&#12483;&#12463;","MS P Gothic",sans-serif;

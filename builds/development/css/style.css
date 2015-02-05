@@ -1284,9 +1284,10 @@ header nav.navShadow {
 /* line 98, ../../../components/sass/modules/_article.scss */
 #vs_print {
   background: #376B6D;
+  margin-bottom: 0;
 }
 
-/* line 103, ../../../components/sass/modules/_article.scss */
+/* line 104, ../../../components/sass/modules/_article.scss */
 #motto, #is_an_art {
   color: white;
   margin: 4em 0;
@@ -1301,20 +1302,20 @@ header nav.navShadow {
   clear: both;
 }
 @media (min-width: 750px) {
-  /* line 103, ../../../components/sass/modules/_article.scss */
+  /* line 104, ../../../components/sass/modules/_article.scss */
   #motto, #is_an_art {
     padding: 3em 0;
     margin: 4.5em 0 7.5em;
   }
 }
-/* line 111, ../../../components/sass/modules/_article.scss */
+/* line 112, ../../../components/sass/modules/_article.scss */
 #motto h1, #is_an_art h1 {
   font-family: "Times New Roman", Times, Georgia, serif;
   font-style: italic;
   font-size: 1.875em;
   line-height: 1.33333em;
 }
-/* line 115, ../../../components/sass/modules/_article.scss */
+/* line 116, ../../../components/sass/modules/_article.scss */
 #motto h1 span, #is_an_art h1 span {
   padding: 0 10px;
   background: #E83015;
@@ -1326,17 +1327,17 @@ header nav.navShadow {
   background-image: linear-gradient(to left, #cb1b45, #e83015);
 }
 @media (min-width: 750px) {
-  /* line 111, ../../../components/sass/modules/_article.scss */
+  /* line 112, ../../../components/sass/modules/_article.scss */
   #motto h1, #is_an_art h1 {
     font-size: 2.5em;
     line-height: 1.2em;
   }
-  /* line 126, ../../../components/sass/modules/_article.scss */
+  /* line 127, ../../../components/sass/modules/_article.scss */
   #motto h1 span, #is_an_art h1 span {
     padding: 0 20px;
   }
 }
-/* line 131, ../../../components/sass/modules/_article.scss */
+/* line 132, ../../../components/sass/modules/_article.scss */
 #motto h2, #is_an_art h2 {
   font-family: "Noto Sans Japanese", "&#12513;&#12452;&#12522;&#12458;", "Meiryo", "&#12498;&#12521;&#12462;&#12494;&#35282;&#12468;Pro W3", "Hiragino Kaku Gothic Pro", "MS P&#12468;&#12471;&#12483;&#12463;", "MS P Gothic", sans-serif;
   font-weight: 100;
@@ -1344,7 +1345,7 @@ header nav.navShadow {
   line-height: 1.6em;
   text-align: right;
 }
-/* line 136, ../../../components/sass/modules/_article.scss */
+/* line 137, ../../../components/sass/modules/_article.scss */
 #motto h2 span, #is_an_art h2 span {
   padding: 0 5px;
   background: #E83015;
@@ -1356,13 +1357,13 @@ header nav.navShadow {
   background-image: linear-gradient(to right, #cb1b45, #e83015);
 }
 @media (min-width: 750px) {
-  /* line 131, ../../../components/sass/modules/_article.scss */
+  /* line 132, ../../../components/sass/modules/_article.scss */
   #motto h2, #is_an_art h2 {
     font-size: 1.5625em;
     line-height: 1.28em;
     margin-top: 2px;
   }
-  /* line 149, ../../../components/sass/modules/_article.scss */
+  /* line 150, ../../../components/sass/modules/_article.scss */
   #motto h2 span, #is_an_art h2 span {
     padding: 0 10px;
   }
@@ -1636,7 +1637,13 @@ footer p {
 #contact-form p.label {
   margin: 0;
 }
-/* line 54, ../../../components/sass/modules/_contact.scss */
+/* line 53, ../../../components/sass/modules/_contact.scss */
+#contact-form p#note {
+  margin-top: -20px;
+  font-size: 11px;
+  color: #b38216;
+}
+/* line 59, ../../../components/sass/modules/_contact.scss */
 #contact-form #response {
   border: 1px solid #FFB11B;
   -moz-border-radius: 5px;
@@ -1648,12 +1655,13 @@ footer p {
   max-width-font-size: 1.3em;
   max-width-color: #FFB11B;
 }
-/* line 64, ../../../components/sass/modules/_contact.scss */
+/* line 69, ../../../components/sass/modules/_contact.scss */
 #contact-form #response h3 {
-  font-size: 1.2em;
+  font-size: 1em;
+  color: #b38216;
 }
 
-/* line 71, ../../../components/sass/modules/_contact.scss */
+/* line 77, ../../../components/sass/modules/_contact.scss */
 #contact-wrap {
   position: relative;
   width: 305px;
@@ -1667,7 +1675,7 @@ footer p {
   -webkit-box-shadow: #061b20 2px 2px 10px;
   box-shadow: #061b20 2px 2px 10px;
 }
-/* line 79, ../../../components/sass/modules/_contact.scss */
+/* line 85, ../../../components/sass/modules/_contact.scss */
 #contact-wrap span.close {
   cursor: pointer;
   float: right;
@@ -1677,12 +1685,12 @@ footer p {
   text-shadow: 0 1px 0 #fff;
   opacity: 0.2;
 }
-/* line 87, ../../../components/sass/modules/_contact.scss */
+/* line 93, ../../../components/sass/modules/_contact.scss */
 #contact-wrap span.close:hover {
   opacity: 0.4;
 }
 
-/* line 93, ../../../components/sass/modules/_contact.scss */
+/* line 99, ../../../components/sass/modules/_contact.scss */
 #ghost {
   width: 100%;
   position: fixed;
@@ -1697,16 +1705,16 @@ footer p {
   justify-content: center;
 }
 
-/* line 102, ../../../components/sass/modules/_contact.scss */
+/* line 108, ../../../components/sass/modules/_contact.scss */
 .no-js #ghost {
   z-index: 90;
 }
 
-/* line 106, ../../../components/sass/modules/_contact.scss */
+/* line 112, ../../../components/sass/modules/_contact.scss */
 #contact-page {
   padding-top: 50px;
 }
-/* line 108, ../../../components/sass/modules/_contact.scss */
+/* line 114, ../../../components/sass/modules/_contact.scss */
 #contact-page #contact-form {
   max-width: 60em;
   margin-left: auto;
@@ -1956,13 +1964,39 @@ head:hover ~ #contact-page #contact-form:before, head:hover ~ body #contact-page
 #accessibility main {
   margin-top: 3em;
 }
-/* line 5, ../../../components/sass/modules/_accessibility.scss */
+@media (min-width: 750px) {
+  /* line 5, ../../../components/sass/modules/_accessibility.scss */
+  #accessibility main > div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  /* line 3, ../../../components/sass/_mixins.scss */
+  #accessibility main > div:before, #accessibility main > div:after {
+    content: '';
+    display: table;
+  }
+  /* line 8, ../../../components/sass/_mixins.scss */
+  #accessibility main > div:after {
+    clear: both;
+  }
+  /* line 10, ../../../components/sass/modules/_accessibility.scss */
+  #accessibility main > p {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: right;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+/* line 16, ../../../components/sass/modules/_accessibility.scss */
 #accessibility .fullheight {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
   background: url("/images/accessibility.jpg");
   background-repeat: no-repeat;
   background-position: 30% top;
@@ -1971,16 +2005,8 @@ head:hover ~ #contact-page #contact-form:before, head:hover ~ body #contact-page
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-/* line 10, ../../../components/sass/modules/_accessibility.scss */
-#accessibility .first-block, #accessibility .second-block {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  margin-bottom: 50px;
+  max-width: 500px;
 }
 
 /* line 1, ../../../components/sass/modules/_words.scss */
@@ -2123,15 +2149,31 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
 
 /* line 1, ../../../components/sass/modules/_conclude.scss */
 #to_conclude {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  overflow: hidden;
   background: #FBE251;
 }
-/* line 8, ../../../components/sass/modules/_conclude.scss */
+/* line 3, ../../../components/sass/_mixins.scss */
+#to_conclude:before, #to_conclude:after {
+  content: '';
+  display: table;
+}
+/* line 8, ../../../components/sass/_mixins.scss */
+#to_conclude:after {
+  clear: both;
+}
+/* line 3, ../../../components/sass/_mixins.scss */
+#to_conclude > div:before, #to_conclude > div:after {
+  content: '';
+  display: table;
+}
+/* line 8, ../../../components/sass/_mixins.scss */
+#to_conclude > div:after {
+  clear: both;
+}
+/* line 15, ../../../components/sass/modules/_conclude.scss */
 #to_conclude #chairs {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
   background: url("/images/chairs.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -2142,14 +2184,29 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
   background-size: cover;
   opacity: .8;
 }
-/* line 17, ../../../components/sass/modules/_conclude.scss */
+@media (min-width: 750px) {
+  /* line 15, ../../../components/sass/modules/_conclude.scss */
+  #to_conclude #chairs {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+  }
+}
+/* line 26, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
   color: #b38216;
+}
+@media (min-width: 750px) {
+  /* line 26, ../../../components/sass/modules/_conclude.scss */
+  #to_conclude article {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+  }
 }
 /* line 3, ../../../components/sass/_mixins.scss */
 #to_conclude article:before, #to_conclude article:after {
@@ -2160,15 +2217,12 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
 #to_conclude article:after {
   clear: both;
 }
-/* line 22, ../../../components/sass/modules/_conclude.scss */
+/* line 33, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article div {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
   overflow: hidden;
   background: #fdf3b5;
-  margin: 0 10px 10px;
-  padding: 10px 20px;
+  margin: 50px 0 100px;
+  padding: 5px 10px 20px;
 }
 /* line 3, ../../../components/sass/_mixins.scss */
 #to_conclude article div:before, #to_conclude article div:after {
@@ -2179,7 +2233,17 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
 #to_conclude article div:after {
   clear: both;
 }
-/* line 30, ../../../components/sass/modules/_conclude.scss */
+@media (min-width: 750px) {
+  /* line 33, ../../../components/sass/modules/_conclude.scss */
+  #to_conclude article div {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 10px 10px;
+    padding: 10px 20px 20px;
+  }
+}
+/* line 45, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article h1 {
   font-family: "Times New Roman", Times, Georgia, serif;
   font-weight: 400;
@@ -2188,22 +2252,22 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
   font-size: 2.5em;
   line-height: 1.2em;
 }
-/* line 37, ../../../components/sass/modules/_conclude.scss */
+/* line 52, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article h2 {
-  font-size: 1.5625em;
-  line-height: 1.28em;
+  font-size: 1.3125em;
+  line-height: 1.52381em;
   font-weight: 100;
-  padding: 2px 7px;
+  padding: 2px 10px;
   margin-bottom: 0.64em;
-  background: #b38216;
+  background: #ae7f16;
   color: #FBE251;
 }
-/* line 45, ../../../components/sass/modules/_conclude.scss */
+/* line 60, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article p {
   background: #fff;
   padding: 0 5px;
 }
-/* line 50, ../../../components/sass/modules/_conclude.scss */
+/* line 65, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article ul li {
   background: #FBE251;
   margin: 4px 0;
@@ -2219,14 +2283,22 @@ head:hover ~ #words > div:nth-child(2) > div:before, head:hover ~ body #words > 
 #to_conclude article ul:after {
   clear: both;
 }
-/* line 58, ../../../components/sass/modules/_conclude.scss */
+/* line 73, ../../../components/sass/modules/_conclude.scss */
 #to_conclude article h3 {
+  font-family: "Raleway", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 200;
   background: #b38216;
   color: #FBE251;
   float: right;
   display: inline-block;
   margin-top: 5px;
   padding: 0 2px;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url("/images/shrewd_logo.png") no-repeat center center;
+  width: 305px;
+  height: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */
