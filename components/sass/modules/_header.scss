@@ -19,22 +19,23 @@ header {
       @include centering;
 
       .hgroup {
-         position: relative;
+         // position: relative;
          z-index: 100;
             h1 {
                // color: $white;
                // border: 2px solid darken(#fff, 10);
                // padding: 0 5px;
                @include image_rep;
-               background: url('/images/shrewd_logo.png') no-repeat center center;
-               width: 305px;
-               height: 36px;
+               background: url('/images/area40logo1.png') no-repeat center center;
+               width: 235px;
+               height: 275px;
                margin: 0 auto;
             } //h1
 
             h2 {
                position: absolute;
-               top: rhythm(8);
+               // top: rhythm(44);
+               margin-right: 3em;
                @include adjust-font-size-to(12px);
                font-family: $mainFont;
                // @include leader(4);
@@ -48,7 +49,10 @@ header {
             p {
                text-align: center;
                position: relative;
-               top: rhythm(16);
+               top: rhythm(10);
+               @include breakpoint(500px max-width){
+                  top: rhythm(14);
+               }
                margin-bottom: 0;
                span {
                transition: color .5s ease-out;

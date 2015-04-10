@@ -16,13 +16,22 @@ header nav {
       h3 {
          height: 45px;
          @include span(4);
-         @include adjust-font-size-to(20px);
+         @include adjust-font-size-to(26px);
          margin: {
             top: 0;
             bottom: 0;
          }
          font-family: $raleway;
-         font-weight: 400;
+         font-weight: 500;
+         span {
+            font-family: $notoSans;
+            font-weight: 200;
+            font-size: 18px;
+            margin-left: 5px;
+            @include breakpoint($small max-width) {
+               display: none;
+            } //breadpoint
+         } //span
          // @include button($kihada);
          background: $kihada;
          @include background-image(
@@ -51,17 +60,17 @@ header nav {
             @include single-text-shadow(lighten($kihada, 20), -1px, -1px);
          } // a
 
-         @include breakpoint(max-width $medium) {
-            span#studio {
-               display: none;
-            }
-         } //breakpoint
+         // @include breakpoint(max-width $medium) {
+         //    span#studio {
+         //       display: none;
+         //    }
+         // } //breakpoint
 
-         @include breakpoint(max-width $small) {
-            span#design {
-               display: none;
-            }
-         } //breakpoint
+         // @include breakpoint(max-width $small) {
+         //    span#design {
+         //       display: none;
+         //    }
+         // } //breakpoint
 
       } //h3
 

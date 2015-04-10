@@ -139,7 +139,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    // window.onload=changeImg;
 
    // Random Background 2nd
-   bgImageTotal=33;
+   bgImageTotal=32;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
