@@ -7,18 +7,19 @@
       &>div:first-child {
          @include clearfix;
          @include centering;
-         background: $omeshicha;
-         @include gradientBorders($omeshicha);
+         // background: $omeshicha;
+         background: $jinzamomi;
+         @include gradientBorders($jinzamomi);
          h1, h2 {
-            @include text-shadow( darken($omeshicha, 10) -1px -1px);
+            @include text-shadow( darken($jinzamomi, 10) -1px -1px);
          }
          transition: all .5s ease-out;
          // transition: box-shadow .5s ease-out;
          &:hover {
-            background: $ake;
-            @include gradientBorders($ake);
+            background: $toki;
+            @include gradientBorders($toki);
             h1, h2 {
-               @include text-shadow( darken($ake, 10) -1px -1px);
+               @include text-shadow( darken($toki, 10) -1px -1px);
             }
          } //div:hover
          padding: rhythm(10) rhythm(4);
@@ -57,7 +58,7 @@
             } //li
             &>li:first-child {
                // margin-bottom: .5em;
-               background: $tamamorokoshi;
+               background: $ominaeshi;
                // background: $asagi;
                // transition: background .5s ease-out;
                // &:hover {
@@ -76,7 +77,8 @@
                }
             } //li:first-child
             &>li:nth-child(2) {
-               background: lighten($omeshicha, 10);
+               // background: lighten($omeshicha, 10);
+               background: lighten($benihi, 10);
                @include breakpoint($medium) {
                   padding-top: rhythm(3);
                   padding-left: rhythm(4);
@@ -112,10 +114,10 @@
          }
       } //h2, h3, ul
       h2 {
-         background: $kihada;
-         color: darken($tamamorokoshi, 20);
-         @include gradientBorders($kihada);
-         @include text-shadow( lighten($kihada, 20) -1px -1px);
+         background: $araisyu;
+         @include gradientBorders($araisyu);
+         color: darken($benihi, 20);
+         @include text-shadow( lighten($araisyu, 10) -1px -1px);
          margin-top: 0;
          @include centering;
          padding: 1.0em;
@@ -126,10 +128,11 @@
          padding: rhythm(12, 40px) rhythm(4, 40px);
       }
       h3 {
-         background: $ake;
+         background: $nae;
+         color: darken($moegi, 20);
          text-align: right;
          padding: rhythm(12, 30px) rhythm(2, 30px);
-         @include text-shadow( darken($ake, 10) -1px -1px);
+         @include text-shadow( lighten($nae, 10) -1px -1px);
          // padding: .5em;
          // @include centering;
          @include breakpoint($small) {
@@ -144,7 +147,7 @@
          }
       } //h3
       ul {
-         background: $omeshicha;
+         background: $moegi;
          padding: 2em 1.0em 1em;
          @include breakpoint($small) {
             border-left: 4px solid #fff;
@@ -171,8 +174,9 @@
          }
       } //div, ul
       &>div {
-         background: $wakatake;
-         @include text-shadow( darken($wakatake, 10) -1px -1px);
+         background: $kariyasu;
+         color: darken($kariyasu, 30);
+         @include text-shadow( lighten($kariyasu, 10) -1px -1px);
          padding: 6.0em 1.0em;
          @include breakpoint($small) {
             border-left: 4px solid #fff;
@@ -183,7 +187,9 @@
          }
       } // div
       ul {
-         background: $nae;
+         background: $kihada;
+         color: darken($kariyasu, 30);
+         @include text-shadow( lighten($kihada, 10) -1px -1px);
          text-align: right;
          padding: 2em .5em 1em;
          @include breakpoint($small) {
