@@ -69,7 +69,7 @@ footer {
          // }
       } //li:hover
    } //#contact
-   
+
 
    ul {
       position: absolute;
@@ -150,7 +150,7 @@ footer {
                      background: url('/images/socialmedia/flickr-32.png') no-repeat center center;
                   }
                   &#twitter {
-                     background: url('/images/socialmedia/twitter_32.png') no-repeat center center;
+                     background: url('/images/socialmedia/twitter-32.png') no-repeat center center;
                   }
                   &#behance {
                      background: url('/images/socialmedia/behance-32.png') no-repeat center center;
@@ -163,6 +163,9 @@ footer {
                   }
                   &#gplus {
                      background: url('/images/socialmedia/google+-32.png') no-repeat center center;
+                  }
+                  &#linkedin {
+                     background: url('/images/socialmedia/linkedin_32.png') no-repeat center center;
                   }
                } //breakpoint($medium)
 
@@ -192,4 +195,3 @@ footer {
    }
 
 } // footer
-
