@@ -119,6 +119,9 @@ footer {
                &#gplus {
                   background: url('/images/socialmedia/google+-16.png') no-repeat center center;
                }
+              &#linkedin {
+                 background: url('/images/socialmedia/linkedin-16.png') no-repeat center center;
+              }
 
                @include breakpoint($small) {
                   width: 24px;
@@ -140,6 +143,9 @@ footer {
                   }
                   &#gplus {
                      background: url('/images/socialmedia/google+-24.png') no-repeat center center;
+                  }
+                  &#linkedin {
+                     background: url('/images/socialmedia/linkedin-24.png') no-repeat center center;
                   }
                } //breakpoint($small)
 
@@ -165,7 +171,7 @@ footer {
                      background: url('/images/socialmedia/google+-32.png') no-repeat center center;
                   }
                   &#linkedin {
-                     background: url('/images/socialmedia/linkedin_32.png') no-repeat center center;
+                     background: url('/images/socialmedia/linkedin-32.png') no-repeat center center;
                   }
                } //breakpoint($medium)
 
