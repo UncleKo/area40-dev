@@ -201,6 +201,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 #grid div.horiz {
@@ -490,10 +491,10 @@ header nav.navShadow {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #EB7A77;
-  -moz-box-shadow: #f5bbba 0 0 0 10px inset, #f2a5a3 0 0 0 20px inset, #ee908d 0 0 0 30px inset;
-  -webkit-box-shadow: #f5bbba 0 0 0 10px inset, #f2a5a3 0 0 0 20px inset, #ee908d 0 0 0 30px inset;
-  box-shadow: #f5bbba 0 0 0 10px inset, #f2a5a3 0 0 0 20px inset, #ee908d 0 0 0 30px inset;
+  background: #376B6D;
+  -moz-box-shadow: #519da0 0 0 0 10px inset, #488c8f 0 0 0 20px inset, #407c7e 0 0 0 30px inset;
+  -webkit-box-shadow: #519da0 0 0 0 10px inset, #488c8f 0 0 0 20px inset, #407c7e 0 0 0 30px inset;
+  box-shadow: #519da0 0 0 0 10px inset, #488c8f 0 0 0 20px inset, #407c7e 0 0 0 30px inset;
   transition: all .5s ease-out;
   padding: 5em 2em;
 }
@@ -505,16 +506,16 @@ header nav.navShadow {
   clear: both;
 }
 #intro header > div:first-child h1, #intro header > div:first-child h2 {
-  text-shadow: #e44f4b -1px -1px;
+  text-shadow: #264a4b -1px -1px;
 }
 #intro header > div:first-child:hover {
-  background: #EEA9A9;
-  -moz-box-shadow: #fbe9e9 0 0 0 10px inset, #f6d4d4 0 0 0 20px inset, #f2bebe 0 0 0 30px inset;
-  -webkit-box-shadow: #fbe9e9 0 0 0 10px inset, #f6d4d4 0 0 0 20px inset, #f2bebe 0 0 0 30px inset;
-  box-shadow: #fbe9e9 0 0 0 10px inset, #f6d4d4 0 0 0 20px inset, #f2bebe 0 0 0 30px inset;
+  background: #91B493;
+  -moz-box-shadow: #bed3c0 0 0 0 10px inset, #afc9b1 0 0 0 20px inset, #a0bea2 0 0 0 30px inset;
+  -webkit-box-shadow: #bed3c0 0 0 0 10px inset, #afc9b1 0 0 0 20px inset, #a0bea2 0 0 0 30px inset;
+  box-shadow: #bed3c0 0 0 0 10px inset, #afc9b1 0 0 0 20px inset, #a0bea2 0 0 0 30px inset;
 }
 #intro header > div:first-child:hover h1, #intro header > div:first-child:hover h2 {
-  text-shadow: #e67e7e -1px -1px;
+  text-shadow: #739f75 -1px -1px;
 }
 @media (max-width: 750px) {
   #intro header > div:first-child {
@@ -572,7 +573,7 @@ header nav.navShadow {
   }
 }
 #intro header > div:nth-child(2) > ul > li:first-child {
-  background: #DDD23B;
+  background: #7DB9DE;
 }
 @media (min-width: 960px) {
   #intro header > div:nth-child(2) > ul > li:first-child {
@@ -592,7 +593,7 @@ header nav.navShadow {
   }
 }
 #intro header > div:nth-child(2) > ul > li:nth-child(2) {
-  background: #f98260;
+  background: #54a3d4;
 }
 @media (min-width: 960px) {
   #intro header > div:nth-child(2) > ul > li:nth-child(2) {
@@ -642,12 +643,12 @@ header nav.navShadow {
   }
 }
 #intro #graphic h2 {
-  background: #FB966E;
-  -moz-box-shadow: #fdccb8 0 0 0 10px inset, #fcbaa0 0 0 0 20px inset, #fca887 0 0 0 30px inset;
-  -webkit-box-shadow: #fdccb8 0 0 0 10px inset, #fcbaa0 0 0 0 20px inset, #fca887 0 0 0 30px inset;
-  box-shadow: #fdccb8 0 0 0 10px inset, #fcbaa0 0 0 0 20px inset, #fca887 0 0 0 30px inset;
-  color: #b92f07;
-  text-shadow: #fcbaa0 -1px -1px;
+  background: #F7D94C;
+  -moz-box-shadow: #fae995 0 0 0 10px inset, #f9e37d 0 0 0 20px inset, #f8de64 0 0 0 30px inset;
+  -webkit-box-shadow: #fae995 0 0 0 10px inset, #f9e37d 0 0 0 20px inset, #f8de64 0 0 0 30px inset;
+  box-shadow: #fae995 0 0 0 10px inset, #f9e37d 0 0 0 20px inset, #f8de64 0 0 0 30px inset;
+  color: #b38216;
+  text-shadow: #efda79 -1px -1px;
   margin-top: 0;
   display: -webkit-flex;
   display: flex;
@@ -665,11 +666,11 @@ header nav.navShadow {
   }
 }
 #intro #graphic h3 {
-  background: #86C166;
-  color: #435922;
+  background: #E9CD4C;
+  color: #b38216;
   text-align: right;
   padding: 3.2em 0.53333em;
-  text-shadow: #a3d08a -1px -1px;
+  text-shadow: #efda79 -1px -1px;
 }
 @media (min-width: 750px) {
   #intro #graphic h3 {
@@ -688,7 +689,8 @@ header nav.navShadow {
   }
 }
 #intro #graphic ul {
-  background: #7BA23F;
+  background: #FBE251;
+  color: #b38216;
   padding: 2em 1.0em 1em;
 }
 @media (min-width: 750px) {
@@ -723,9 +725,7 @@ header nav.navShadow {
   }
 }
 #intro #webdesign > div {
-  background: #E9CD4C;
-  color: #8b7511;
-  text-shadow: #efda79 -1px -1px;
+  background: #86C166;
   padding: 6.0em 1.0em;
 }
 @media (min-width: 750px) {
@@ -740,9 +740,7 @@ header nav.navShadow {
   }
 }
 #intro #webdesign ul {
-  background: #FBE251;
-  color: #8b7511;
-  text-shadow: #fcea83 -1px -1px;
+  background: #5DAC81;
   text-align: right;
   padding: 2em .5em 1em;
 }
