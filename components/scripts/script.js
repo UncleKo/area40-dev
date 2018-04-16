@@ -120,7 +120,7 @@
    // window.onload=changeImg;
 
    // Random Background 2nd
-   bgImageTotal=32;
+   bgImageTotal=28;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);

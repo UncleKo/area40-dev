@@ -1215,6 +1215,9 @@ footer ul li a#facebook {
 footer ul li a#gplus {
   background: url("/images/socialmedia/google+-16.png") no-repeat center center;
 }
+footer ul li a#linkedin {
+  background: url("/images/socialmedia/linkedin-16.png") no-repeat center center;
+}
 @media (min-width: 750px) {
   footer ul li a {
     width: 24px;
@@ -1237,6 +1240,9 @@ footer ul li a#gplus {
   }
   footer ul li a#gplus {
     background: url("/images/socialmedia/google+-24.png") no-repeat center center;
+  }
+  footer ul li a#linkedin {
+    background: url("/images/socialmedia/linkedin-24.png") no-repeat center center;
   }
 }
 @media (min-width: 960px) {
@@ -1263,7 +1269,7 @@ footer ul li a#gplus {
     background: url("/images/socialmedia/google+-32.png") no-repeat center center;
   }
   footer ul li a#linkedin {
-    background: url("/images/socialmedia/linkedin_32.png") no-repeat center center;
+    background: url("/images/socialmedia/linkedin-32.png") no-repeat center center;
   }
 }
 footer ul li a:hover {
