@@ -2,5 +2,6 @@
 node_modules
 .tmp
 .sass-cache
-builds/**/images/*
+builds/development/images/*
 gulpfile.js
+package.json
