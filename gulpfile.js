@@ -17,7 +17,7 @@ var env,
     sassStyle;
 
 // env = 'development';
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -103,4 +103,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'jsCopy', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'js', 'jsCopy', 'compass', 'connect']);
