@@ -1,0 +1,73 @@
+header {
+   .fullheight {
+      // @include backImage('../images/background/0001.jpg');
+      // background-color: $usuao;
+      @include background-image(
+         linear-gradient(
+            right, lighten($usuao, 20), $usuao
+         )
+      );
+      @include bgCover(center bottom);
+      // background-repeat: no-repeat;
+      // background-position: center center;
+      // background-attachment: fixed;
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      // background-size: cover;
+
+      @include centering;
+
+      .hgroup {
+         // position: relative;
+         z-index: 100;
+            h1 {
+               // color: $white;
+               // border: 2px solid darken(#fff, 10);
+               // padding: 0 5px;
+               @include image_rep;
+               background: url('./images/area40logo2.png') no-repeat center center;
+               width: 235px;
+               height: 275px;
+               margin: 0 auto;
+            } //h1
+
+            h2 {
+               position: absolute;
+               // top: rhythm(44);
+               margin-right: 3em;
+               @include adjust-font-size-to(12px);
+               font-family: $mainFont;
+               // @include leader(4);
+               span {
+                  border: 1px solid darken($white, 10);
+                  background: $white;
+                  line-height: 1.8;
+                  } //span
+            } //h2
+
+            p {
+               text-align: center;
+               position: relative;
+               top: rhythm(10);
+               @include breakpoint(500px max-width){
+                  top: rhythm(14);
+               }
+               margin-bottom: 0;
+               span {
+               transition: color .5s ease-out;
+                  color: $kurenai;
+                  font-size: 55px;
+                  // @include adjust-font-size-to(55px);
+                  // @include single-text-shadow($kuchiba, 1px, -1px);
+                  &:hover {
+                     // color: darken($kihada, 10);
+                     color: $syojyohi;
+                     @include text-shadow(darken($syojyohi, 20) 0 0 1px);
+                  }
+               } //span
+            } //p
+      } //.hgroup
+
+   } //fullheight
+} //header

@@ -17,7 +17,7 @@ var env,
     sassStyle;
 
 // env = 'development';
-env = 'production';
+env = 'development';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -76,7 +76,7 @@ gulp.task('compass', function() {
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
   gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
-  gulp.watch('builds/development/*.html', ['html']);
+  gulp.watch('builds/development/**/*.html', ['html']);
 });
 
 gulp.task('connect', function() {

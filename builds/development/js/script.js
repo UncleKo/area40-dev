@@ -21,7 +21,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    var topOffset = parseInt ($('header nav').css('height'));
    // console.log(topOffset);
 
-   var isTouch = 'ontouchstart' in document.documentElement;
+  //  var isTouch = 'ontouchstart' in document.documentElement;
 
    // window height
    var fullheight = function() {
@@ -51,7 +51,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
          var swidth = $(element).css('width'),
             cssHeight = $(element).css('height');
 
-         if($(window).width() < 450 || $(window).width() > 732) { 
+         if($(window).width() < 450 || $(window).width() > 732) {
             $(element).css('height', swidth);
          } else {
             $(element).css('height', '');
@@ -61,7 +61,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
             $(element).css('height', '');
          };
 
-         //    if($(window).width() > 650 && $(window).width() < 960) { 
+         //    if($(window).width() > 650 && $(window).width() < 960) {
          //       $(element).css('height', swidth);
          //    } else {
          //       $(element).css('height', '');
@@ -70,7 +70,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       });
 
    }
-   
+
    sheight();
 
    $(window).resize(function() {
@@ -85,7 +85,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       $('.rectangle').each(function(index, element){
          var recWidth = parseInt( $(element).css('width'));
 
-         if($(window).width() > 732) { 
+         if($(window).width() > 732) {
             $(element).css('height', recWidth/2);
          } else {
             $(element).css('height', '');
@@ -94,7 +94,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
       });
 
    }
-   
+
    recHeight();
 
    $(window).resize(function() {
@@ -107,7 +107,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
 
    // var intro = function() {
    //    var introHeaderWidth = $('#intro header').css('width');
-   //    if($(window).width() > 650 && $(window).width() < 960) { 
+   //    if($(window).width() > 650 && $(window).width() < 960) {
    //       $('#intro div:nth-child(2) > ul > li:first-child')
    //          .css('height', introHeaderWidth/2);
    //    }
@@ -118,7 +118,7 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
 
    // Random Background Image
    // function changeImg(imgNumber) {
-   //    var myImages = ["images/background/1.jpg", "images/background/2.jpg", "images/background/3.jpg", "images/background/4.jpg","images/background/5.jpg", "images/background/6.jpg"]; 
+   //    var myImages = ["images/background/1.jpg", "images/background/2.jpg", "images/background/3.jpg", "images/background/4.jpg","images/background/5.jpg", "images/background/6.jpg"];
    //    // var imgShown = document.body.style.backgroundImage;
    //    var newImgNumber =Math.floor(Math.random()*myImages.length);
 
@@ -132,33 +132,33 @@ return null!=s&&(a="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.
    //    //    '-moz-background-size': 'cover',
    //    //    '-o-background-size': 'cover',
    //    //    'background-size': 'cover'
-   //    // }); 
+   //    // });
    //    // document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
    // }
 
    // window.onload=changeImg;
 
    // Random Background 2nd
-   bgImageTotal=33;
+   bgImageTotal=28;
    // randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
    // To pick up 0 for white background every once in a while
    // randomNumber = Math.round(Math.random()*bgImageTotal);
    // Not to pick up 0
    randomNumber = Math.ceil(Math.random()*bgImageTotal);
 
-if(!isTouch) {
-   $('header .fullheight').css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)') 
-} else {	
-   $('header .fullheight').css("backgroundImage", 'url(/images/background/small/'+randomNumber+'.jpg)') 
+if($(window).width() > 1000) {
+   $('header .fullheight').css("backgroundImage", 'url(./images/background/'+randomNumber+'.jpg)')
+} else {
+   $('header .fullheight').css("backgroundImage", 'url(./images/background/small/'+randomNumber+'.jpg)')
 }
 
 
 // $('section .fullheight').each(function(index, element){
 //    randomNumber = Math.ceil(Math.random()*bgImageTotal);
-//    $(element).css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');	
+//    $(element).css("backgroundImage", 'url(/images/background/'+randomNumber+'.jpg)');
 // })
 
-   
+
 
 
    // Animated Scrolling
@@ -236,7 +236,7 @@ if(!isTouch) {
 
    //Contact Form
 	var placeholder = function() {
-	
+
 			var nameField = document.getElementById("name");
 
 			nameField.onfocus = function() {
@@ -250,8 +250,8 @@ if(!isTouch) {
 					nameField.value = "お名前";
 				}
 			};
-			
-			
+
+
 			var emailField = document.getElementById("e_mail");
 
 			emailField.onfocus = function() {
@@ -265,8 +265,8 @@ if(!isTouch) {
 					emailField.value = "メールアドレス";
 				}
 			};
-			
-			
+
+
 			var subjectField = document.getElementById("subject");
 
 			subjectField.onfocus = function() {
@@ -280,8 +280,8 @@ if(!isTouch) {
 					subjectField.value = "件名";
 				}
 			};
-			
-			
+
+
 			var commentArea = document.getElementById("comments");
 
 			commentArea.onfocus = function() {
@@ -295,7 +295,7 @@ if(!isTouch) {
 					commentArea.value = "コメント/お問い合わせ内容";
 				}
 			};
-			
+
 		} //placeholder
 
       // placeholder();
@@ -303,73 +303,72 @@ if(!isTouch) {
    var ghost = $('#ghost');
 
 	var Contact = {
-	
+
 		init: function() {
 
          // var ghost = $('<section id="ghost" class="fullheight"></section>');
-	
+
 			var contactWrap = $('<div id="contact-wrap"></div>')
 												.appendTo('#ghost')
 												.load( 'contact.html form#contact' )
 												.hide();
 
-			$('a#contact-link').on('click', function(e) {		
+			$('a#contact-link').on('click', function(e) {
                ghost.css('z-index', '90');
-					Contact.close.call(contactWrap);					
-					contactWrap.fadeIn(1500);	
+					Contact.close.call(contactWrap);
+					contactWrap.fadeIn(1500);
 					placeholder();
 					response();
 
 					e.preventDefault();
 			});
-		
+
 		},
-		
+
 		close: function() {
-		
+
 			var $this = $(this);
-		
+
 			if ( $this.find('span.close').length ) return;
 
 			$('<span class="close">X</span>')
 				.prependTo(this)
-				.on('click', function() {					
+				.on('click', function() {
 					$this.fadeOut(1000);
                ghost.css('z-index', '-1');
 			});
-		
+
 		}
-	
+
 	} //Contact
-	
+
 	Contact.init();
-      
-   
+
+
 	var response = function() {
-	
+
 			$('form#contact').on('submit', function(e) {
-			
-				e.preventDefault();		
-			
+
+				e.preventDefault();
+
 				$('#contact-form').append('<img src="/images/loading.gif" alt="Currently Loading" id="loading" />');
-				
+
 				$.post( '/send_email.php', $(this).serialize(), function(result) {
-				
+
 					$('#response').remove();
 					$('#contact-form').append('<div id="response">' + result + '</div>');
 					$('#loading').fadeOut(500, function() {
 						$(this).remove();
-						
+
 					});
-					
+
 				});
-				
-			});	
-		
+
+			});
+
 		} //response
 
 	// response();
-   
+
 
 })(); //on load
-

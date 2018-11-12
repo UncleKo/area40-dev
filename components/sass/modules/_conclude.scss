@@ -16,7 +16,7 @@
       @include breakpoint($small) {
          @include span(6);
       }
-      background:url('/images/chairs.jpg'); 
+      background:url('../images/chairs.jpg'); 
          // linear-gradient(
          //    left, rgba(lighten($aku, 10), .5),  rgba(lighten($kihada, 10), .5)
          // ), url('/images/chairs.jpg');
@@ -39,7 +39,7 @@
          @include breakpoint($small) {
             @include border-radius(10px);
             margin: 0 10px 10px;
-            padding: 10px 20px 20px;
+            padding: 10px 20px 50px;
          }
       } //div
       h1 {
@@ -47,12 +47,12 @@
          font-weight: 400;
          font-style: italic;
          @include text-shadow(darken($kihada, 10) -1px -1px 0);
-         @include adjust-font-size-to(40px);
+         @include adjust-font-size-to(30px);
       } //h1
       h2 {
-         @include adjust-font-size-to(21px);
+         @include adjust-font-size-to(20px);
          font-weight: 100;
-         padding: 2px 10px;
+         padding: 6px 10px;
          @include trailer(2, 25px);
          background: darken($tamamorokoshi, 21);
          color: $kihada;
@@ -81,9 +81,9 @@
          margin-top: 5px;
          padding: 0 2px;
          @include image_rep;
-         background: url('/images/shrewd_logo.png') no-repeat center center;
-         width: 305px;
-         height: 36px;
+         background: url('/images/area40.png') no-repeat center center;
+         width: 256px;
+         height: 50px;
       } //h3
    } //article
 }

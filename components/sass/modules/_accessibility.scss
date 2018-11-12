@@ -14,7 +14,7 @@
       } //breakpoint
    } //main
    .fullheight {
-      background: url('/images/accessibility.jpg');
+      background: url('../images/accessibility.jpg');
       @include bgCover(30% top, scroll);
       margin-bottom: 50px;
       max-width: 500px;
